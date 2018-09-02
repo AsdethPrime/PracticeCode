@@ -1,18 +1,16 @@
 // This program checks if the device supports creating Work Profile
+// First Edit: To make the program more efficient, I am turning this into a function rather than a class. 
 
 import android.content.pm.PackageManager ;
 
-public class CheckIfWorkProfileIsSupported
-{
-	// Class consists of 1 function that return 1 value
-	// Value returned is TRUE if creating Work Profile is possible
-	// Value returned is FALSE if not possible
+	// This is just a skeleton function and NOT a complete file
+	// The function checks if Work Profile is supported on the device
+	// The function returns TRUE if it is supported
+	// The function returns FALSE if it is not supported.
 
 	public static Boolean main ( String args[] )
 	{
-		Boolean isSupported ;
-		PackageManager pm = getPackageManager();
-		isSupported = pm.hasSystemFeature(PackageManager.FEATURE_MANAGED_USERS);
-		return isSupported ;
+		return pm.hasSystemFeature(PackageManager.FEATURE_MANAGED_USERS);
+		
 	}
 }		
