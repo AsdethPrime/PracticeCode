@@ -1,0 +1,8 @@
+I created this file so I can keep track of the big picture.
+As i am a single developer, attempting to create a whole system you can expect a lot of change to the orginal draft.
+The plan at the moment is to create an open source version of Enterprise Mobility Management (EMM)
+The whole system requires the following components to run:
+a. An Agent Program running on the device 
+b. A Command and Control Server that listen to incoming connection and that provides commands for the Agent application to Execute
+c. Police Engine. A seperate program that runs on the Command and Control Server.
+d. Proxy Server : A proxy server that stand between mobile device and corporate network which control access based on device posture. 
