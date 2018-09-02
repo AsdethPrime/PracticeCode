@@ -11,7 +11,7 @@ public class CheckIfWorkProfileIsSupported
 	public static Boolean main ( String args[] )
 	{
 		Boolean isSupported ;
-		PackageManager pm = getPackageManager()
+		PackageManager pm = getPackageManager();
 		isSupported = pm.hasSystemFeature(PackageManager.FEATURE_MANAGED_USERS);
 		return isSupported ;
 	}
