@@ -3,6 +3,7 @@ See a lot of reference to PackageManager class.
 Wanted to research it so here go. 
 
 Step 1: Android is open source - so code source code for Package Management class:
+
 >>>>> Has a lot of comments, next step read through this and remove the comments as it starts making sense to you. 
 >>>>> Removed the licence detailes
 >>>>> PackageManager class is located inside the package android.content.pm
@@ -10,84 +11,32 @@ Step 1: Android is open source - so code source code for Package Management clas
 >>>>> Understanding this though I am delegating for a future purpose
 >>>>> Current objective = understand the package manager class 
 >>>>> Removing the imports ( 15 imports removed) 
+>>>>> Things PackageManager Class has:
+
+1. A AndroidException class called NameNotFoundException which is there to throw exception when a given package can't be found.
+
+2. An integer called GET_ACTIVITIES which has been initialized to 1 and it is meant to flag return information about activities in a package ( need to research more on this ).
+
+3. An integer called GET_RECEIVERS which is initialized to 2 and it is meant to return information about intent receivers in the package. 
+
+4. An integer called GET_SERVICES which has been initialized to 4 and is meant to flag return information about services in the package. 
+
+5. An int called GET_PROVIDERS which has been initialized to 8 and is meant to flag the return information about content providers in the package. 
+
+6. An int called GET_INSTRUMENTATION which has been initialized to 16 and is meant to flag the return information about instrumentation in the package. 
+
+7. An int called GET_INTENT_FILTERS which has been initialized to 32 to flad return information about intent filters supported by the activity. 
+
+8. An int called GET_SIGNATURES which has been initialized to 64 to flag the return information about signatures included in the package. 
+
+9. An int called GET_RESOLVED_FILTER which has also been initializd to 64 to flag return of IntentFilter that was matched for a particular ResolveInfo in ResolveInfo Filter ( need to do more research on this )  
+
+10. An int called GET_META_DATA which has been initialized to 128 to flag return of ComponentInfo metadata from android.os.Bundle that are associated with a component. This applies for any API returning a ComponentInfo subclass (need to do more research on this ).
+
+11. An int GET_GIDS which has been initialized to 256 to flag the return of "PackageInfo gids group ids " that are associated with an application. This applies for any API returning a PackageInfo class, either directly or nested inside of another.
+
 
 /**
- * Class for retrieving various kinds of information related to the application
- * packages that are currently installed on the device.
- *
- * You can find this class through {@link Context#getPackageManager}.
- */
-public abstract class PackageManager {
-    /**
-     * This exception is thrown when a given package, application, or component
-     * name can not be found.
-     */
-    public static class NameNotFoundException extends AndroidException {
-        public NameNotFoundException() {
-        }
-        public NameNotFoundException(String name) {
-            super(name);
-        }
-    }
-    /**
-     * {@link PackageInfo} flag: return information about
-     * activities in the package in {@link PackageInfo#activities}.
-     */
-    public static final int GET_ACTIVITIES              = 0x00000001;
-    /**
-     * {@link PackageInfo} flag: return information about
-     * intent receivers in the package in
-     * {@link PackageInfo#receivers}.
-     */
-    public static final int GET_RECEIVERS               = 0x00000002;
-    /**
-     * {@link PackageInfo} flag: return information about
-     * services in the package in {@link PackageInfo#services}.
-     */
-    public static final int GET_SERVICES                = 0x00000004;
-    /**
-     * {@link PackageInfo} flag: return information about
-     * content providers in the package in
-     * {@link PackageInfo#providers}.
-     */
-    public static final int GET_PROVIDERS               = 0x00000008;
-    /**
-     * {@link PackageInfo} flag: return information about
-     * instrumentation in the package in
-     * {@link PackageInfo#instrumentation}.
-     */
-    public static final int GET_INSTRUMENTATION         = 0x00000010;
-    /**
-     * {@link PackageInfo} flag: return information about the
-     * intent filters supported by the activity.
-     */
-    public static final int GET_INTENT_FILTERS          = 0x00000020;
-    /**
-     * {@link PackageInfo} flag: return information about the
-     * signatures included in the package.
-     */
-    public static final int GET_SIGNATURES          = 0x00000040;
-    /**
-     * {@link ResolveInfo} flag: return the IntentFilter that
-     * was matched for a particular ResolveInfo in
-     * {@link ResolveInfo#filter}.
-     */
-    public static final int GET_RESOLVED_FILTER         = 0x00000040;
-    /**
-     * {@link ComponentInfo} flag: return the {@link ComponentInfo#metaData}
-     * data {@link android.os.Bundle}s that are associated with a component.
-     * This applies for any API returning a ComponentInfo subclass.
-     */
-    public static final int GET_META_DATA               = 0x00000080;
-    /**
-     * {@link PackageInfo} flag: return the
-     * {@link PackageInfo#gids group ids} that are associated with an
-     * application.
-     * This applies for any API returning a PackageInfo class, either
-     * directly or nested inside of another.
-     */
-    public static final int GET_GIDS                    = 0x00000100;
-    /**
      * {@link PackageInfo} flag: include disabled components in the returned info.
      */
     public static final int GET_DISABLED_COMPONENTS     = 0x00000200;
