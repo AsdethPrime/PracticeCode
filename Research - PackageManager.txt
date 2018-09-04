@@ -15,243 +15,50 @@ Step 1: Android is open source - so code source code for Package Management clas
 
 1. A AndroidException class called NameNotFoundException which is there to throw exception when a given package can't be found.
 
-2. An integer called GET_ACTIVITIES which has been initialized to 1 and it is meant to flag return information about activities in a package ( need to research more on this ).
-
-3. An integer called GET_RECEIVERS which is initialized to 2 and it is meant to return information about intent receivers in the package. 
-
-4. An integer called GET_SERVICES which has been initialized to 4 and is meant to flag return information about services in the package. 
-
-5. An int called GET_PROVIDERS which has been initialized to 8 and is meant to flag the return information about content providers in the package. 
-
-6. An int called GET_INSTRUMENTATION which has been initialized to 16 and is meant to flag the return information about instrumentation in the package. 
-
-7. An int called GET_INTENT_FILTERS which has been initialized to 32 to flad return information about intent filters supported by the activity. 
-
-8. An int called GET_SIGNATURES which has been initialized to 64 to flag the return information about signatures included in the package. 
-
-9. An int called GET_RESOLVED_FILTER which has also been initializd to 64 to flag return of IntentFilter that was matched for a particular ResolveInfo in ResolveInfo Filter ( need to do more research on this )  
-
-10. An int called GET_META_DATA which has been initialized to 128 to flag return of ComponentInfo metadata from android.os.Bundle that are associated with a component. This applies for any API returning a ComponentInfo subclass (need to do more research on this ).
-
-11. An int GET_GIDS which has been initialized to 256 to flag the return of "PackageInfo gids group ids " that are associated with an application. This applies for any API returning a PackageInfo class, either directly or nested inside of another.
-
-
-/**
-     * {@link PackageInfo} flag: include disabled components in the returned info.
-     */
-    public static final int GET_DISABLED_COMPONENTS     = 0x00000200;
-    /**
-     * {@link ApplicationInfo} flag: return the
-     * {@link ApplicationInfo#sharedLibraryFiles paths to the shared libraries}
-     * that are associated with an application.
-     * This applies for any API returning an ApplicationInfo class, either
-     * directly or nested inside of another.
-     */
-    public static final int GET_SHARED_LIBRARY_FILES    = 0x00000400;
-    /**
-     * {@link ProviderInfo} flag: return the
-     * {@link ProviderInfo#uriPermissionPatterns URI permission patterns}
-     * that are associated with a content provider.
-     * This applies for any API returning a ProviderInfo class, either
-     * directly or nested inside of another.
-     */
-    public static final int GET_URI_PERMISSION_PATTERNS  = 0x00000800;
-    /**
-     * {@link PackageInfo} flag: return information about
-     * permissions in the package in
-     * {@link PackageInfo#permissions}.
-     */
-    public static final int GET_PERMISSIONS               = 0x00001000;
-    /**
-     * Flag parameter to retrieve some information about all applications (even
-     * uninstalled ones) which have data directories. This state could have
-     * resulted if applications have been deleted with flag
-     * {@code DONT_DELETE_DATA} with a possibility of being replaced or
-     * reinstalled in future.
-     * <p>
-     * Note: this flag may cause less information about currently installed
-     * applications to be returned.
-     */
-    public static final int GET_UNINSTALLED_PACKAGES = 0x00002000;
-    /**
-     * {@link PackageInfo} flag: return information about
-     * hardware preferences in
-     * {@link PackageInfo#configPreferences PackageInfo.configPreferences} and
-     * requested features in {@link PackageInfo#reqFeatures
-     * PackageInfo.reqFeatures}.
-     */
-    public static final int GET_CONFIGURATIONS = 0x00004000;
-    /**
-     * Resolution and querying flag: if set, only filters that support the
-     * {@link android.content.Intent#CATEGORY_DEFAULT} will be considered for
-     * matching.  This is a synonym for including the CATEGORY_DEFAULT in your
-     * supplied Intent.
-     */
-    public static final int MATCH_DEFAULT_ONLY   = 0x00010000;
-    /**
-     * Permission check result: this is returned by {@link #checkPermission}
-     * if the permission has been granted to the given package.
-     */
-    public static final int PERMISSION_GRANTED = 0;
-    /**
-     * Permission check result: this is returned by {@link #checkPermission}
-     * if the permission has not been granted to the given package.
-     */
-    public static final int PERMISSION_DENIED = -1;
-    /**
-     * Signature check result: this is returned by {@link #checkSignatures}
-     * if all signatures on the two packages match.
-     */
-    public static final int SIGNATURE_MATCH = 0;
-    /**
-     * Signature check result: this is returned by {@link #checkSignatures}
-     * if neither of the two packages is signed.
-     */
-    public static final int SIGNATURE_NEITHER_SIGNED = 1;
-    /**
-     * Signature check result: this is returned by {@link #checkSignatures}
-     * if the first package is not signed but the second is.
-     */
-    public static final int SIGNATURE_FIRST_NOT_SIGNED = -1;
-    /**
-     * Signature check result: this is returned by {@link #checkSignatures}
-     * if the second package is not signed but the first is.
-     */
-    public static final int SIGNATURE_SECOND_NOT_SIGNED = -2;
-    /**
-     * Signature check result: this is returned by {@link #checkSignatures}
-     * if not all signatures on both packages match.
-     */
-    public static final int SIGNATURE_NO_MATCH = -3;
-    /**
-     * Signature check result: this is returned by {@link #checkSignatures}
-     * if either of the packages are not valid.
-     */
-    public static final int SIGNATURE_UNKNOWN_PACKAGE = -4;
-    /**
-     * Flag for {@link #setApplicationEnabledSetting(String, int, int)}
-     * and {@link #setComponentEnabledSetting(ComponentName, int, int)}: This
-     * component or application is in its default enabled state (as specified
-     * in its manifest).
-     */
-    public static final int COMPONENT_ENABLED_STATE_DEFAULT = 0;
-    /**
-     * Flag for {@link #setApplicationEnabledSetting(String, int, int)}
-     * and {@link #setComponentEnabledSetting(ComponentName, int, int)}: This
-     * component or application has been explictily enabled, regardless of
-     * what it has specified in its manifest.
-     */
-    public static final int COMPONENT_ENABLED_STATE_ENABLED = 1;
-    /**
-     * Flag for {@link #setApplicationEnabledSetting(String, int, int)}
-     * and {@link #setComponentEnabledSetting(ComponentName, int, int)}: This
-     * component or application has been explicitly disabled, regardless of
-     * what it has specified in its manifest.
-     */
-    public static final int COMPONENT_ENABLED_STATE_DISABLED = 2;
-    /**
-     * Flag for {@link #setApplicationEnabledSetting(String, int, int)} only: The
-     * user has explicitly disabled the application, regardless of what it has
-     * specified in its manifest.  Because this is due to the user's request,
-     * they may re-enable it if desired through the appropriate system UI.  This
-     * option currently <strong>can not</strong> be used with
-     * {@link #setComponentEnabledSetting(ComponentName, int, int)}.
-     */
-    public static final int COMPONENT_ENABLED_STATE_DISABLED_USER = 3;
-    /**
-     * Flag parameter for {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} to
-     * indicate that this package should be installed as forward locked, i.e. only the app itself
-     * should have access to its code and non-resource assets.
-     * @hide
-     */
-    public static final int INSTALL_FORWARD_LOCK = 0x00000001;
-    /**
-     * Flag parameter for {@link #installPackage} to indicate that you want to replace an already
-     * installed package, if one exists.
-     * @hide
-     */
-    public static final int INSTALL_REPLACE_EXISTING = 0x00000002;
-    /**
-     * Flag parameter for {@link #installPackage} to indicate that you want to
-     * allow test packages (those that have set android:testOnly in their
-     * manifest) to be installed.
-     * @hide
-     */
-    public static final int INSTALL_ALLOW_TEST = 0x00000004;
-    /**
-     * Flag parameter for {@link #installPackage} to indicate that this
-     * package has to be installed on the sdcard.
-     * @hide
-     */
-    public static final int INSTALL_EXTERNAL = 0x00000008;
-    /**
-     * Flag parameter for {@link #installPackage} to indicate that this package
-     * has to be installed on the sdcard.
-     * @hide
-     */
-    public static final int INSTALL_INTERNAL = 0x00000010;
-    /**
-     * Flag parameter for {@link #installPackage} to indicate that this install
-     * was initiated via ADB.
-     *
-     * @hide
-     */
-    public static final int INSTALL_FROM_ADB = 0x00000020;
-    /**
-     * Flag parameter for
-     * {@link #setComponentEnabledSetting(android.content.ComponentName, int, int)} to indicate
-     * that you don't want to kill the app containing the component.  Be careful when you set this
-     * since changing component states can make the containing application's behavior unpredictable.
-     */
-    public static final int DONT_KILL_APP = 0x00000001;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} on success.
-     * @hide
-     */
-    public static final int INSTALL_SUCCEEDED = 1;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if the package is
-     * already installed.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_ALREADY_EXISTS = -1;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if the package archive
-     * file is invalid.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_INVALID_APK = -2;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if the URI passed in
-     * is invalid.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_INVALID_URI = -3;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if the package manager
-     * service found that the device didn't have enough storage space to install the app.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_INSUFFICIENT_STORAGE = -4;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if a
-     * package is already installed with the same name.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_DUPLICATE_PACKAGE = -5;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the requested shared user does not exist.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_NO_SHARED_USER = -6;
+2. Few Integers used as flags
+a. GET_ACTIVITIES 
+b. GET_RECEIVERS
+c. GET_SERVICES 
+d. GET_PROVIDERS
+e. GET_INSTRUMENTATION
+f. GET_INTENT_FILTERS
+g. GET_SIGNATURES 
+h. GET_RESOLVED_FILTER 
+i. GET_META_DATA
+j. GET_GIDS
+h. GET_DISABLED_COMPONENTS
+i. GET_SHARED_LIBRARY-FILES 
+j. GET_URI_PERMISSION_PATTERNS 
+k. GET_PREMISSIONS
+l. GET_UNINSTALLED_PACKAGES 
+m. GET_CONFIGURATIONS
+n. MATCH_DEFAULT_ONLY 
+o. PERMISSION_GRANTED = 0;
+p. PERMISSION_DENIED = -1;
+q. SIGNATURE_MATCH = 0;
+r. SIGNATURE_NEITHER_SIGNED = 1;
+s. SIGNATURE_FIRST_NOT_SIGNED = -1;
+t. SIGNATURE_SECOND_NOT_SIGNED = -2;
+u. SIGNATURE_NO_MATCH = -3;
+v. SIGNATURE_UNKNOWN_PACKAGE = -4;
+w.  COMPONENT_ENABLED_STATE_DEFAULT = 0;
+x. COMPONENT_ENABLED_STATE_ENABLED = 1;
+y. COMPONENT_ENABLED_STATE_DISABLED = 2;
+z. COMPONENT_ENABLED_STATE_DISABLED_USER = 3;
+a. INSTALL_FORWARD_LOCK = 0x00000001;
+b. INSTALL_REPLACE_EXISTING = 0x00000002;
+c. INSTALL_ALLOW_TEST = 0x00000004;
+d. INSTALL_EXTERNAL = 0x00000008;
+e. INSTALL_INTERNAL = 0x00000010;
+f. INSTALL_FROM_ADB = 0x00000020;
+g. DONT_KILL_APP = 0x00000001;
+h. INSTALL_SUCCEEDED = 1;
+i. INSTALL_FAILED_ALREADY_EXISTS = -1;
+j. INSTALL_FAILED_INVALID_APK = -2;
+k. INSTALL_FAILED_INVALID_URI = -3;
+l. INSTALL_FAILED_INSUFFICIENT_STORAGE = -4;
+m. INSTALL_FAILED_DUPLICATE_PACKAGE = -5;
+n. INSTALL_FAILED_NO_SHARED_USER = -6;
     /**
      * Installation return code: this is passed to the {@link IPackageInstallObserver} by
      * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
