@@ -122,155 +122,25 @@ w. String FEATURE_SENSOR_COMPASS = "android.hardware.sensor.compass";
 x. String FEATURE_SENSOR_GYROSCOPE = "android.hardware.sensor.gyroscope";
 y. String FEATURE_SENSOR_LIGHT = "android.hardware.sensor.light";
 z. String FEATURE_SENSOR_PROXIMITY = "android.hardware.sensor.proximity";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device has a telephony radio with data
-     * communication support.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_TELEPHONY = "android.hardware.telephony";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device has a CDMA telephony stack.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_TELEPHONY_CDMA = "android.hardware.telephony.cdma";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device has a GSM telephony stack.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_TELEPHONY_GSM = "android.hardware.telephony.gsm";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device supports connecting to USB devices
-     * as the USB host.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_USB_HOST = "android.hardware.usb.host";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device supports connecting to USB accessories.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_USB_ACCESSORY = "android.hardware.usb.accessory";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The SIP API is enabled on the device.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_SIP = "android.software.sip";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device supports SIP-based VOIP.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_SIP_VOIP = "android.software.sip.voip";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device's display has a touch screen.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_TOUCHSCREEN = "android.hardware.touchscreen";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device's touch screen supports
-     * multitouch sufficient for basic two-finger gesture detection.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_TOUCHSCREEN_MULTITOUCH = "android.hardware.touchscreen.multitouch";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device's touch screen is capable of
-     * tracking two or more fingers fully independently.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_TOUCHSCREEN_MULTITOUCH_DISTINCT = "android.hardware.touchscreen.multitouch.distinct";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device's touch screen is capable of
-     * tracking a full hand of fingers fully independently -- that is, 5 or
-     * more simultaneous independent pointers.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_TOUCHSCREEN_MULTITOUCH_JAZZHAND = "android.hardware.touchscreen.multitouch.jazzhand";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device does not have a touch screen, but
-     * does support touch emulation for basic events. For instance, the
-     * device might use a mouse or remote control to drive a cursor, and
-     * emulate basic touch pointer events like down, up, drag, etc. All
-     * devices that support android.hardware.touchscreen or a sub-feature are
-     * presumed to also support faketouch.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_FAKETOUCH = "android.hardware.faketouch";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device does not have a touch screen, but
-     * does support touch emulation for basic events that supports distinct
-     * tracking of two or more fingers.  This is an extension of
-     * {@link #FEATURE_FAKETOUCH} for input devices with this capability.  Note
-     * that unlike a distinct multitouch screen as defined by
-     * {@link #FEATURE_TOUCHSCREEN_MULTITOUCH_DISTINCT}, these kinds of input
-     * devices will not actually provide full two-finger gestures since the
-     * input is being transformed to cursor movement on the screen.  That is,
-     * single finger gestures will move a cursor; two-finger swipes will
-     * result in single-finger touch events; other two-finger gestures will
-     * result in the corresponding two-finger touch event.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_FAKETOUCH_MULTITOUCH_DISTINCT = "android.hardware.faketouch.multitouch.distinct";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device does not have a touch screen, but
-     * does support touch emulation for basic events that supports tracking
-     * a hand of fingers (5 or more fingers) fully independently.
-     * This is an extension of
-     * {@link #FEATURE_FAKETOUCH} for input devices with this capability.  Note
-     * that unlike a multitouch screen as defined by
-     * {@link #FEATURE_TOUCHSCREEN_MULTITOUCH_JAZZHAND}, not all two finger
-     * gestures can be detected due to the limitations described for
-     * {@link #FEATURE_FAKETOUCH_MULTITOUCH_DISTINCT}.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_FAKETOUCH_MULTITOUCH_JAZZHAND = "android.hardware.faketouch.multitouch.jazzhand";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device supports portrait orientation
-     * screens.  For backwards compatibility, you can assume that if neither
-     * this nor {@link #FEATURE_SCREEN_LANDSCAPE} is set then the device supports
-     * both portrait and landscape.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_SCREEN_PORTRAIT = "android.hardware.screen.portrait";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device supports landscape orientation
-     * screens.  For backwards compatibility, you can assume that if neither
-     * this nor {@link #FEATURE_SCREEN_PORTRAIT} is set then the device supports
-     * both portrait and landscape.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_SCREEN_LANDSCAPE = "android.hardware.screen.landscape";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device supports live wallpapers.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_LIVE_WALLPAPER = "android.software.live_wallpaper";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device supports WiFi (802.11) networking.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_WIFI = "android.hardware.wifi";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device supports Wi-Fi Direct networking.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_WIFI_DIRECT = "android.hardware.wifi.direct";
+a. String FEATURE_TELEPHONY = "android.hardware.telephony";
+b. String FEATURE_TELEPHONY_CDMA = "android.hardware.telephony.cdma";
+c. String FEATURE_TELEPHONY_GSM = "android.hardware.telephony.gsm";
+d. String FEATURE_USB_HOST = "android.hardware.usb.host";
+e. String FEATURE_USB_ACCESSORY = "android.hardware.usb.accessory";
+f. String FEATURE_SIP = "android.software.sip";
+g. String FEATURE_SIP_VOIP = "android.software.sip.voip";
+h. String FEATURE_TOUCHSCREEN = "android.hardware.touchscreen";
+i. String FEATURE_TOUCHSCREEN_MULTITOUCH = "android.hardware.touchscreen.multitouch";
+j. String FEATURE_TOUCHSCREEN_MULTITOUCH_DISTINCT = "android.hardware.touchscreen.multitouch.distinct";
+k. String FEATURE_TOUCHSCREEN_MULTITOUCH_JAZZHAND = "android.hardware.touchscreen.multitouch.jazzhand";
+l. String FEATURE_FAKETOUCH = "android.hardware.faketouch";
+m. String FEATURE_FAKETOUCH_MULTITOUCH_DISTINCT = "android.hardware.faketouch.multitouch.distinct";
+n. String FEATURE_FAKETOUCH_MULTITOUCH_JAZZHAND = "android.hardware.faketouch.multitouch.jazzhand";
+o. String FEATURE_SCREEN_PORTRAIT = "android.hardware.screen.portrait";
+p. String FEATURE_SCREEN_LANDSCAPE = "android.hardware.screen.landscape";
+q. String FEATURE_LIVE_WALLPAPER = "android.software.live_wallpaper";
+r. String FEATURE_WIFI = "android.hardware.wifi";
+s. final String FEATURE_WIFI_DIRECT = "android.hardware.wifi.direct";
     /**
      * Feature for {@link #getSystemAvailableFeatures} and
      * {@link #hasSystemFeature}: This is a device dedicated to showing UI
