@@ -59,461 +59,69 @@ k. INSTALL_FAILED_INVALID_URI = -3;
 l. INSTALL_FAILED_INSUFFICIENT_STORAGE = -4;
 m. INSTALL_FAILED_DUPLICATE_PACKAGE = -5;
 n. INSTALL_FAILED_NO_SHARED_USER = -6;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * a previously installed package of the same name has a different signature
-     * than the new package (and the old package's data was not removed).
-     * @hide
-     */
-    public static final int INSTALL_FAILED_UPDATE_INCOMPATIBLE = -7;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package is requested a shared user which is already installed on the
-     * device and does not have matching signature.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_SHARED_USER_INCOMPATIBLE = -8;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package uses a shared library that is not available.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_MISSING_SHARED_LIBRARY = -9;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package uses a shared library that is not available.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_REPLACE_COULDNT_DELETE = -10;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package failed while optimizing and validating its dex files,
-     * either because there was not enough storage or the validation failed.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_DEXOPT = -11;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package failed because the current SDK version is older than
-     * that required by the package.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_OLDER_SDK = -12;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package failed because it contains a content provider with the
-     * same authority as a provider already installed in the system.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_CONFLICTING_PROVIDER = -13;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package failed because the current SDK version is newer than
-     * that required by the package.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_NEWER_SDK = -14;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package failed because it has specified that it is a test-only
-     * package and the caller has not supplied the {@link #INSTALL_ALLOW_TEST}
-     * flag.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_TEST_ONLY = -15;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the package being installed contains native code, but none that is
-     * compatible with the the device's CPU_ABI.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_CPU_ABI_INCOMPATIBLE = -16;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package uses a feature that is not available.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_MISSING_FEATURE = -17;
-    // ------ Errors related to sdcard
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * a secure container mount point couldn't be accessed on external media.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_CONTAINER_ERROR = -18;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package couldn't be installed in the specified install
-     * location.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_INVALID_INSTALL_LOCATION = -19;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package couldn't be installed in the specified install
-     * location because the media is not available.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_MEDIA_UNAVAILABLE = -20;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package couldn't be installed because the verification timed out.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_VERIFICATION_TIMEOUT = -21;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package couldn't be installed because the verification did not succeed.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_VERIFICATION_FAILURE = -22;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the package changed from what the calling program expected.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_PACKAGE_CHANGED = -23;
-    /**
-     * Installation return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)} if
-     * the new package is assigned a different UID than it previously held.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_UID_CHANGED = -24;
-    /**
-     * Installation parse return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)}
-     * if the parser was given a path that is not a file, or does not end with the expected
-     * '.apk' extension.
-     * @hide
-     */
-    public static final int INSTALL_PARSE_FAILED_NOT_APK = -100;
-    /**
-     * Installation parse return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)}
-     * if the parser was unable to retrieve the AndroidManifest.xml file.
-     * @hide
-     */
-    public static final int INSTALL_PARSE_FAILED_BAD_MANIFEST = -101;
-    /**
-     * Installation parse return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)}
-     * if the parser encountered an unexpected exception.
-     * @hide
-     */
-    public static final int INSTALL_PARSE_FAILED_UNEXPECTED_EXCEPTION = -102;
-    /**
-     * Installation parse return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)}
-     * if the parser did not find any certificates in the .apk.
-     * @hide
-     */
-    public static final int INSTALL_PARSE_FAILED_NO_CERTIFICATES = -103;
-    /**
-     * Installation parse return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)}
-     * if the parser found inconsistent certificates on the files in the .apk.
-     * @hide
-     */
-    public static final int INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES = -104;
-    /**
-     * Installation parse return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)}
-     * if the parser encountered a CertificateEncodingException in one of the
-     * files in the .apk.
-     * @hide
-     */
-    public static final int INSTALL_PARSE_FAILED_CERTIFICATE_ENCODING = -105;
-    /**
-     * Installation parse return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)}
-     * if the parser encountered a bad or missing package name in the manifest.
-     * @hide
-     */
-    public static final int INSTALL_PARSE_FAILED_BAD_PACKAGE_NAME = -106;
-    /**
-     * Installation parse return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)}
-     * if the parser encountered a bad shared user id name in the manifest.
-     * @hide
-     */
-    public static final int INSTALL_PARSE_FAILED_BAD_SHARED_USER_ID = -107;
-    /**
-     * Installation parse return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)}
-     * if the parser encountered some structural problem in the manifest.
-     * @hide
-     */
-    public static final int INSTALL_PARSE_FAILED_MANIFEST_MALFORMED = -108;
-    /**
-     * Installation parse return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)}
-     * if the parser did not find any actionable tags (instrumentation or application)
-     * in the manifest.
-     * @hide
-     */
-    public static final int INSTALL_PARSE_FAILED_MANIFEST_EMPTY = -109;
-    /**
-     * Installation failed return code: this is passed to the {@link IPackageInstallObserver} by
-     * {@link #installPackage(android.net.Uri, IPackageInstallObserver, int)}
-     * if the system failed to install the package because of system issues.
-     * @hide
-     */
-    public static final int INSTALL_FAILED_INTERNAL_ERROR = -110;
-    /**
-     * Flag parameter for {@link #deletePackage} to indicate that you don't want to delete the
-     * package's data directory.
-     *
-     * @hide
-     */
-    public static final int DONT_DELETE_DATA = 0x00000001;
-    /**
-     * Return code for when package deletion succeeds. This is passed to the
-     * {@link IPackageDeleteObserver} by {@link #deletePackage()} if the system
-     * succeeded in deleting the package.
-     *
-     * @hide
-     */
-    public static final int DELETE_SUCCEEDED = 1;
-    /**
-     * Deletion failed return code: this is passed to the
-     * {@link IPackageDeleteObserver} by {@link #deletePackage()} if the system
-     * failed to delete the package for an unspecified reason.
-     *
-     * @hide
-     */
-    public static final int DELETE_FAILED_INTERNAL_ERROR = -1;
-    /**
-     * Deletion failed return code: this is passed to the
-     * {@link IPackageDeleteObserver} by {@link #deletePackage()} if the system
-     * failed to delete the package because it is the active DevicePolicy
-     * manager.
-     *
-     * @hide
-     */
-    public static final int DELETE_FAILED_DEVICE_POLICY_MANAGER = -2;
-    /**
-     * Return code that is passed to the {@link IPackageMoveObserver} by
-     * {@link #movePackage(android.net.Uri, IPackageMoveObserver)} when the
-     * package has been successfully moved by the system.
-     *
-     * @hide
-     */
-    public static final int MOVE_SUCCEEDED = 1;
-    /**
-     * Error code that is passed to the {@link IPackageMoveObserver} by
-     * {@link #movePackage(android.net.Uri, IPackageMoveObserver)}
-     * when the package hasn't been successfully moved by the system
-     * because of insufficient memory on specified media.
-     * @hide
-     */
-    public static final int MOVE_FAILED_INSUFFICIENT_STORAGE = -1;
-    /**
-     * Error code that is passed to the {@link IPackageMoveObserver} by
-     * {@link #movePackage(android.net.Uri, IPackageMoveObserver)}
-     * if the specified package doesn't exist.
-     * @hide
-     */
-    public static final int MOVE_FAILED_DOESNT_EXIST = -2;
-    /**
-     * Error code that is passed to the {@link IPackageMoveObserver} by
-     * {@link #movePackage(android.net.Uri, IPackageMoveObserver)}
-     * if the specified package cannot be moved since its a system package.
-     * @hide
-     */
-    public static final int MOVE_FAILED_SYSTEM_PACKAGE = -3;
-    /**
-     * Error code that is passed to the {@link IPackageMoveObserver} by
-     * {@link #movePackage(android.net.Uri, IPackageMoveObserver)}
-     * if the specified package cannot be moved since its forward locked.
-     * @hide
-     */
-    public static final int MOVE_FAILED_FORWARD_LOCKED = -4;
-    /**
-     * Error code that is passed to the {@link IPackageMoveObserver} by
-     * {@link #movePackage(android.net.Uri, IPackageMoveObserver)}
-     * if the specified package cannot be moved to the specified location.
-     * @hide
-     */
-    public static final int MOVE_FAILED_INVALID_LOCATION = -5;
-    /**
-     * Error code that is passed to the {@link IPackageMoveObserver} by
-     * {@link #movePackage(android.net.Uri, IPackageMoveObserver)}
-     * if the specified package cannot be moved to the specified location.
-     * @hide
-     */
-    public static final int MOVE_FAILED_INTERNAL_ERROR = -6;
-    /**
-     * Error code that is passed to the {@link IPackageMoveObserver} by
-     * {@link #movePackage(android.net.Uri, IPackageMoveObserver)} if the
-     * specified package already has an operation pending in the
-     * {@link PackageHandler} queue.
-     *
-     * @hide
-     */
-    public static final int MOVE_FAILED_OPERATION_PENDING = -7;
-    /**
-     * Flag parameter for {@link #movePackage} to indicate that
-     * the package should be moved to internal storage if its
-     * been installed on external media.
-     * @hide
-     */
-    public static final int MOVE_INTERNAL = 0x00000001;
-    /**
-     * Flag parameter for {@link #movePackage} to indicate that
-     * the package should be moved to external media.
-     * @hide
-     */
-    public static final int MOVE_EXTERNAL_MEDIA = 0x00000002;
-    /**
-     * Usable by the required verifier as the {@code verificationCode} argument
-     * for {@link PackageManager#verifyPendingInstall} to indicate that it will
-     * allow the installation to proceed without any of the optional verifiers
-     * needing to vote.
-     *
-     * @hide
-     */
-    public static final int VERIFICATION_ALLOW_WITHOUT_SUFFICIENT = 2;
-    /**
-     * Used as the {@code verificationCode} argument for
-     * {@link PackageManager#verifyPendingInstall} to indicate that the calling
-     * package verifier allows the installation to proceed.
-     */
-    public static final int VERIFICATION_ALLOW = 1;
-    /**
-     * Used as the {@code verificationCode} argument for
-     * {@link PackageManager#verifyPendingInstall} to indicate the calling
-     * package verifier does not vote to allow the installation to proceed.
-     */
-    public static final int VERIFICATION_REJECT = -1;
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and {@link #hasSystemFeature}: The device's
-     * audio pipeline is low-latency, more suitable for audio applications sensitive to delays or
-     * lag in sound input or output.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_AUDIO_LOW_LATENCY = "android.hardware.audio.low_latency";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device is capable of communicating with
-     * other devices via Bluetooth.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_BLUETOOTH = "android.hardware.bluetooth";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device has a camera facing away
-     * from the screen.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_CAMERA = "android.hardware.camera";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device's camera supports auto-focus.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_CAMERA_AUTOFOCUS = "android.hardware.camera.autofocus";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device's camera supports flash.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_CAMERA_FLASH = "android.hardware.camera.flash";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device has a front facing camera.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_CAMERA_FRONT = "android.hardware.camera.front";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device supports one or more methods of
-     * reporting current location.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_LOCATION = "android.hardware.location";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device has a Global Positioning System
-     * receiver and can report precise location.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_LOCATION_GPS = "android.hardware.location.gps";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device can report location with coarse
-     * accuracy using a network-based geolocation system.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_LOCATION_NETWORK = "android.hardware.location.network";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device can record audio via a
-     * microphone.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_MICROPHONE = "android.hardware.microphone";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device can communicate using Near-Field
-     * Communications (NFC).
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_NFC = "android.hardware.nfc";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device includes an accelerometer.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_SENSOR_ACCELEROMETER = "android.hardware.sensor.accelerometer";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device includes a barometer (air
-     * pressure sensor.)
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_SENSOR_BAROMETER = "android.hardware.sensor.barometer";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device includes a magnetometer (compass).
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_SENSOR_COMPASS = "android.hardware.sensor.compass";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device includes a gyroscope.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_SENSOR_GYROSCOPE = "android.hardware.sensor.gyroscope";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device includes a light sensor.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_SENSOR_LIGHT = "android.hardware.sensor.light";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: The device includes a proximity sensor.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_SENSOR_PROXIMITY = "android.hardware.sensor.proximity";
+o. INSTALL_FAILED_UPDATE_INCOMPATIBLE = -7;
+p. INSTALL_FAILED_SHARED_USER_INCOMPATIBLE = -8;
+q. INSTALL_FAILED_MISSING_SHARED_LIBRARY = -9;
+r. INSTALL_FAILED_REPLACE_COULDNT_DELETE = -10;
+s. INSTALL_FAILED_DEXOPT = -11;
+t. INSTALL_FAILED_OLDER_SDK = -12;
+u. FAILED_CONFLICTING_PROVIDER = -13;
+v. INSTALL_FAILED_NEWER_SDK = -14;
+w. INSTALL_FAILED_TEST_ONLY = -15;
+x. INSTALL_FAILED_CPU_ABI_INCOMPATIBLE = -16;
+y. INSTALL_FAILED_MISSING_FEATURE = -17;
+z. INSTALL_FAILED_CONTAINER_ERROR = -18;
+a. INSTALL_FAILED_INVALID_INSTALL_LOCATION = -19;
+b. INSTALL_FAILED_MEDIA_UNAVAILABLE = -20;
+c. INSTALL_FAILED_VERIFICATION_TIMEOUT = -21;
+d. INSTALL_FAILED_VERIFICATION_FAILURE = -22;
+e. INSTALL_FAILED_PACKAGE_CHANGED = -23;
+g. INSTALL_FAILED_UID_CHANGED = -24;
+h. INSTALL_PARSE_FAILED_NOT_APK = -100;
+i. INSTALL_PARSE_FAILED_BAD_MANIFEST = -101;
+j. INSTALL_PARSE_FAILED_UNEXPECTED_EXCEPTION = -102;
+k. INSTALL_PARSE_FAILED_NO_CERTIFICATES = -103;
+l. INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES = -104;
+m. INSTALL_PARSE_FAILED_CERTIFICATE_ENCODING = -105;
+n. INSTALL_PARSE_FAILED_BAD_PACKAGE_NAME = -106;
+o. INSTALL_PARSE_FAILED_BAD_SHARED_USER_ID = -107;
+p. INSTALL_PARSE_FAILED_MANIFEST_MALFORMED = -108;
+q. INSTALL_PARSE_FAILED_MANIFEST_EMPTY = -109;
+r. INSTALL_FAILED_INTERNAL_ERROR = -110;
+s. DONT_DELETE_DATA = 0x00000001;
+t. DELETE_SUCCEEDED = 1;
+u. DELETE_FAILED_INTERNAL_ERROR = -1;
+v. DELETE_FAILED_DEVICE_POLICY_MANAGER = -2;
+w. MOVE_SUCCEEDED = 1;
+x. MOVE_FAILED_INSUFFICIENT_STORAGE = -1;
+y. MOVE_FAILED_DOESNT_EXIST = -2;
+z. MOVE_FAILED_SYSTEM_PACKAGE = -3;
+a. MOVE_FAILED_FORWARD_LOCKED = -4;
+b. MOVE_FAILED_INVALID_LOCATION = -5;
+c. MOVE_FAILED_INTERNAL_ERROR = -6;
+d. MOVE_FAILED_OPERATION_PENDING = -7;
+e. MOVE_INTERNAL = 0x00000001;
+f. MOVE_EXTERNAL_MEDIA = 0x00000002;
+g. VERIFICATION_ALLOW_WITHOUT_SUFFICIENT = 2;
+h. VERIFICATION_ALLOW = 1;
+i. VERIFICATION_REJECT = -1;
+j. String FEATURE_AUDIO_LOW_LATENCY = "android.hardware.audio.low_latency";
+k. String FEATURE_BLUETOOTH = "android.hardware.bluetooth";
+l. String FEATURE_CAMERA = "android.hardware.camera";
+m. String FEATURE_CAMERA_AUTOFOCUS = "android.hardware.camera.autofocus";
+n. String FEATURE_CAMERA_FLASH = "android.hardware.camera.flash";
+o. String FEATURE_CAMERA_FRONT = "android.hardware.camera.front";
+p. String FEATURE_LOCATION = "android.hardware.location";
+q. String FEATURE_LOCATION_GPS = "android.hardware.location.gps";
+r. String FEATURE_LOCATION_NETWORK = "android.hardware.location.network";
+s. String FEATURE_MICROPHONE = "android.hardware.microphone";
+t. String FEATURE_NFC = "android.hardware.nfc";
+u. String FEATURE_SENSOR_ACCELEROMETER = "android.hardware.sensor.accelerometer";
+v. String FEATURE_SENSOR_BAROMETER = "android.hardware.sensor.barometer";
+w. String FEATURE_SENSOR_COMPASS = "android.hardware.sensor.compass";
+x. String FEATURE_SENSOR_GYROSCOPE = "android.hardware.sensor.gyroscope";
+y. String FEATURE_SENSOR_LIGHT = "android.hardware.sensor.light";
+z. String FEATURE_SENSOR_PROXIMITY = "android.hardware.sensor.proximity";
     /**
      * Feature for {@link #getSystemAvailableFeatures} and
      * {@link #hasSystemFeature}: The device has a telephony radio with data
