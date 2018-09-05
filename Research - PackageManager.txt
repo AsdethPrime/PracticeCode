@@ -140,88 +140,17 @@ o. String FEATURE_SCREEN_PORTRAIT = "android.hardware.screen.portrait";
 p. String FEATURE_SCREEN_LANDSCAPE = "android.hardware.screen.landscape";
 q. String FEATURE_LIVE_WALLPAPER = "android.software.live_wallpaper";
 r. String FEATURE_WIFI = "android.hardware.wifi";
-s. final String FEATURE_WIFI_DIRECT = "android.hardware.wifi.direct";
-    /**
-     * Feature for {@link #getSystemAvailableFeatures} and
-     * {@link #hasSystemFeature}: This is a device dedicated to showing UI
-     * on a television.  Television here is defined to be a typical living
-     * room television experience: displayed on a big screen, where the user
-     * is sitting far away from it, and the dominant form of input will be
-     * something like a DPAD, not through touch or mouse.
-     */
-    @SdkConstant(SdkConstantType.FEATURE)
-    public static final String FEATURE_TELEVISION = "android.hardware.type.television";
-    /**
-     * Action to external storage service to clean out removed apps.
-     * @hide
-     */
-    public static final String ACTION_CLEAN_EXTERNAL_STORAGE
-            = "android.content.pm.CLEAN_EXTERNAL_STORAGE";
-    /**
-     * Extra field name for the URI to a verification file. Passed to a package
-     * verifier.
-     *
-     * @hide
-     */
-    public static final String EXTRA_VERIFICATION_URI = "android.content.pm.extra.VERIFICATION_URI";
-    /**
-     * Extra field name for the ID of a package pending verification. Passed to
-     * a package verifier and is used to call back to
-     * {@link PackageManager#verifyPendingInstall(int, int)}
-     */
-    public static final String EXTRA_VERIFICATION_ID = "android.content.pm.extra.VERIFICATION_ID";
-    /**
-     * Extra field name for the package identifier which is trying to install
-     * the package.
-     *
-     * @hide
-     */
-    public static final String EXTRA_VERIFICATION_INSTALLER_PACKAGE
-            = "android.content.pm.extra.VERIFICATION_INSTALLER_PACKAGE";
-    /**
-     * Extra field name for the requested install flags for a package pending
-     * verification. Passed to a package verifier.
-     *
-     * @hide
-     */
-    public static final String EXTRA_VERIFICATION_INSTALL_FLAGS
-            = "android.content.pm.extra.VERIFICATION_INSTALL_FLAGS";
-    /**
-     * Retrieve overall information about an application package that is
-     * installed on the system.
-     * <p>
-     * Throws {@link NameNotFoundException} if a package with the given name can
-     * not be found on the system.
-     *
-     * @param packageName The full name (i.e. com.google.apps.contacts) of the
-     *            desired package.
-     * @param flags Additional option flags. Use any combination of
-     *            {@link #GET_ACTIVITIES}, {@link #GET_GIDS},
-     *            {@link #GET_CONFIGURATIONS}, {@link #GET_INSTRUMENTATION},
-     *            {@link #GET_PERMISSIONS}, {@link #GET_PROVIDERS},
-     *            {@link #GET_RECEIVERS}, {@link #GET_SERVICES},
-     *            {@link #GET_SIGNATURES}, {@link #GET_UNINSTALLED_PACKAGES} to
-     *            modify the data returned.
-     * @return Returns a PackageInfo object containing information about the
-     *         package. If flag GET_UNINSTALLED_PACKAGES is set and if the
-     *         package is not found in the list of installed applications, the
-     *         package information is retrieved from the list of uninstalled
-     *         applications(which includes installed applications as well as
-     *         applications with data directory ie applications which had been
-     *         deleted with DONT_DELTE_DATA flag set).
-     * @see #GET_ACTIVITIES
-     * @see #GET_GIDS
-     * @see #GET_CONFIGURATIONS
-     * @see #GET_INSTRUMENTATION
-     * @see #GET_PERMISSIONS
-     * @see #GET_PROVIDERS
-     * @see #GET_RECEIVERS
-     * @see #GET_SERVICES
-     * @see #GET_SIGNATURES
-     * @see #GET_UNINSTALLED_PACKAGES
-     */
-    public abstract PackageInfo getPackageInfo(String packageName, int flags)
-            throws NameNotFoundException;
+s. String FEATURE_WIFI_DIRECT = "android.hardware.wifi.direct";
+t. String FEATURE_TELEVISION = "android.hardware.type.television";
+u. String ACTION_CLEAN_EXTERNAL_STORAGE = "android.content.pm.CLEAN_EXTERNAL_STORAGE";
+v. String EXTRA_VERIFICATION_URI = "android.content.pm.extra.VERIFICATION_URI";
+w. String EXTRA_VERIFICATION_ID = "android.content.pm.extra.VERIFICATION_ID";
+x. String EXTRA_VERIFICATION_INSTALLER_PACKAGE = "android.content.pm.extra.VERIFICATION_INSTALLER_PACKAGE";
+t. String EXTRA_VERIFICATION_INSTALL_FLAGS = "android.content.pm.extra.VERIFICATION_INSTALL_FLAGS";
+
+
+NOW COMES THE ABSTRACT TYPES 
+1. abstract PackageInfo getPackageInfo(String packageName, int flags) throws NameNotFoundException;
     /**
      * Map from the current package names in use on the device to whatever
      * the current canonical name of that package is.
