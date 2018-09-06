@@ -1,0 +1,23 @@
+These are just some cool open source projects on Github that I am interested in researching further:
+
+1. Flask
+2. Zulip chat 
+3. Django
+4. Rebound
+5. Youtube-dl
+6. System Design Primer
+7. Face Recognition
+8. Ansible
+9. HTTPie
+10. You-Get
+11. Sentry
+12. Tornado
+13. Kivy
+14. Mailpie
+15. Speedtest-cli
+16. Pattern
+17. Gooey
+18. Wagtail CMS
+19. Falcon
+20. Dash
+21. Visdom
