@@ -1,0 +1,9 @@
+To create my Android MDM agent I would need to have the app registered as device administrator.
+
+The following steps are required to do so:
+
+a) Crate a sub-class of DeviceAdminReceiver
+b) Register device admin in manifest.xml
+c) Declare the security policies in device_policies.xml
+d) Createa a class PolicyManager.java
+e) Enable the admin
