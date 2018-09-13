@@ -7,3 +7,17 @@ b) Register device admin in manifest.xml
 c) Declare the security policies in device_policies.xml
 d) Createa a class PolicyManager.java
 e) Enable the admin
+
+Step 1: Create a sub-class of DeviceAdminReceiver
+
+public class MyDeviceAdminReceiver extends DeviceAdminReceiver
+{
+  @Override
+  public void onEnabled(Context context, Intent intent)
+    {
+      super.onEnabled(context,intent);
+    }
+ }
+ 
+ 
+ 
