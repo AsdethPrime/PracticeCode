@@ -1,0 +1,21 @@
+DeviceAdminReceiver is a base class for implementing a device administration component. 
+The class providers a convenience for interpreting the raw intent actions that are sent by the system.
+
+When publishing your DeviceAdmin subclass as a receiver it must handle ACTION_DEVICE_ADMIN_ENABLED and require the Manifest.permission.BIND_DEVICE_ADMIN
+
+Actions under DeviceAdminReceiver
+
+1. DeviceAdminReceiver.ACTION_DEVICE_ADMIN_DISABLED
+2. DeviceAdminReceiver.ACTION_DEVICE_ADMIN_DISABLE_REQUESTED
+3. DeviceAdminReceiver.ACTION_DEVICE_ADMIN_ENABLED
+4. DeviceAdminReceiver.ACTION_LOCK_TASK_ENTERING
+5. DeviceAdminReceiver.ACTION_LOCK_TASK_EXITING
+6. DeviceAdminReceiver.ACTION_PASSWORD_EXPIRING
+7. DeviceAdminReceiver.ACTION_PASSWORD_FAILED
+8. DeviceAdminReceiver.ACTION_PROFILE_PROVISIONING_COMPLETE
+9. DeviceAdminReceiver.DEVICE_ADMIN_META_DATA
+10. DeviceAdminReceiver.EXTRA_DISABLED_WARNING
+11. DeviceAdminReceiver.EXTRA_LOCK_TASK_PACKAGE
+12. DeviceAdminReceiver.EXTRA_TRANSFER_OWNERSHIP_ADMIN_EXTRAS_BUNDLE
+
+
