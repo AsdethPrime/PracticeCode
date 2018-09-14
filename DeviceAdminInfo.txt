@@ -1,0 +1,12 @@
+DeviceAdminInfo class is used to specify metadata information of a device admin component.
+
+It contacts the following policies
+1. DeviceAdminInfo.USES_ENCRYPTED_STORAGE
+2. DeviceAdminInfo.USES_POLICY_DISABLE_CAMERA
+3. DeviceAdminInfo.USES_POLICY_DISABLE_KEYGUARD_FEATURES
+4. DeviceAdminInfo.USES_POLICY_EXPIRE_PASSWORD
+5. DeviceAdminInfo.USES_POLICY_FORCE_LOCK
+6. DeviceAdminInfo.USES_POLICY_LIMIT_PASSWORD
+7. DeviceAdminInfo.USES_POLICY_RESET_PASSWORD
+8. DeviceAdminInfo.USES_POLICY_WATCH_LOGIN
+9. DeviceAdminInfo.USES_POLICY_WIPE_DATA
