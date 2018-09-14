@@ -10,3 +10,20 @@ It contacts the following policies
 7. DeviceAdminInfo.USES_POLICY_RESET_PASSWORD
 8. DeviceAdminInfo.USES_POLICY_WATCH_LOGIN
 9. DeviceAdminInfo.USES_POLICY_WIPE_DATA
+
+
+Public Methods
+1. DeviceAdminInfo.describeContents()
+2. DeviceAdminInfo.getActivityInfo()
+3. DeviceAdminInfo.getComponent()
+4. DeviceAdminInfo.getPackageName()
+5. DeviceAdminInfo.getReceiverName()
+6. DeviceAdminInfo.getTagForPolicy()
+7. DeviceAdminInfo.isVisible()
+8. DeviceAdminInfo.loadDescription()
+9. DeviceAdminInfo.loadIcon()
+10. DeviceAdminInfo.SupportsTransferOwnership()
+11. DeviceAdminInfo.toString()
+12. DeviceAdminInfo.usesPolicy()
+13. DeviceAdminInfo.writeToParcel()
+
