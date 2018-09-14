@@ -1,0 +1,18 @@
+Some general tips for troubleshooting slow ipad
+
+1. Check Memory usages:
+Settings > General > Storage and iCloud > Manage Storage
+
+2. Reset all your settings:
+Settings> General > Reset > Reset all settings
+
+3. Wipe cache:
+Settings> Safari
+> clear history, cookies and data
+
+4. Turn off background app refresh
+Settings > General > Background App Refresh > Toggle Switch Off
+
+5. Reducred graphics and animation
+Settings > General > Accessibility > Reduced Motion > Toggle Switch Off
+
