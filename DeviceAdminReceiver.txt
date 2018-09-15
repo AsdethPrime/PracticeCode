@@ -42,4 +42,24 @@ Public Methods
 20. DeviceAdminReceiver.onUserSwitched()
 21. DeviceAdminReceiver.onUserStopped()
 
+As DeviceAdminReceiver is an extension of BroadcastReceiver class, it inherits the methods of that class. These methods are:
+1. DeviceAdminReceiver.abortBroadcast()
+2. DeviceAdminReceiver.clearAbortBroadcast()
+3. DeviceAdminReceiver.getAbortBroadcast()
+4. DeviceAdminReceiver.getDebugUnregister()
+5. DeviceAdminReceiver.getResultCode()
+6. DeviceAdminReceiver.getResultData()
+7. DeviceAdminReceiver.getResultExtra()
+8. DeviceAdminReceiver.goAsync()
+9. DeviceAdminReceiver.isInitialStickyBroadcast()
+10. DeviceAdminReceiver.isOrderedBroadcast()
+11. DeviceAdminReceiver.onReceive()
+12. DeviceAdminReceiver.peekService()
+13. DeviceAdminReceiver.setDebugUnregister()
+14. DeviceAdminReceiver.setOrderHint()
+15. DeviceAdminReceiver.setResult()
+16. DeviceAdminReceiver.setResultCode()
+17. DeviceAdminReceiver.setResultData()
+18. DeviceAdminReceiver.setResultExtra()
+
 
