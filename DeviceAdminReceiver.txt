@@ -62,4 +62,32 @@ As DeviceAdminReceiver is an extension of BroadcastReceiver class, it inherits t
 17. DeviceAdminReceiver.setResultData()
 18. DeviceAdminReceiver.setResultExtra()
 
+DeviceAdminReceiver is also an Object and hence inherits methods from the Object class, which are as follows:
+1. DeviceAdminReceiver.clone()
+2. DeviceAdminReceiver.equals()
+3. DeviceAdminReceiver.finalize()
+4. DeviceAdminReceiver.getClass()
+5. DeviceAdminReceiver.hashCode()
+6. DeviceAdminReceiver.notify()
+7. DeviceAdminReceiver.notifyAll()
+8. DeviceAdminReceiver.toString()
+9. DeviceAdminReceiver.wait()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
