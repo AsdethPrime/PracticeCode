@@ -19,3 +19,27 @@ Actions under DeviceAdminReceiver
 12. DeviceAdminReceiver.EXTRA_TRANSFER_OWNERSHIP_ADMIN_EXTRAS_BUNDLE
 
 
+Public Methods
+1. DeviceAdminReceiver.getManager()
+2. DeviceAdminReceiver.getWho()
+3. DeviceAdminReceiver.onChoosePrivatekeyAlias()
+4. DeviceAdminReceiver.onDisableRequested()
+5. DeviceAdminReceiver.onDisabled()
+6. DeviceAdminReceiver.onEnabled()
+7. DeviceAdminReceiver.onLockTaskModeExisting()
+8. DeviceAdminReceiver.onNetworkLogsAvaiable()
+9. DeviceAdminReceiver.onPasswordChanged()
+10. DeviceAdminReceiver.onPasswordExpiring()
+11. DeviceAdminReceiver.onPasswordFailed()
+12. DeviceAdminReceiver.onPasswordSucceeded()
+13. DeviceAdminReceiver.onProfileProvisioningComplete
+14. DeviceAdminReceiver.onReceive()
+15. DeviceAdminReceiver.onSecurityLogsAvaiable()
+16. DeviceAdminReceiver.onSystemUpdatePending()
+17. DeviceAdminReceiver.onTrasnferAffiliatedProfileOwnershipComplete()
+18. DeviceAdminReceiver.onUserAdded()
+19. DeviceAdminReceiver.onUserRemoved()
+20. DeviceAdminReceiver.onUserSwitched()
+21. DeviceAdminReceiver.onUserStopped()
+
+
