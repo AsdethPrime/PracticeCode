@@ -16,5 +16,7 @@ Because Android OS runs each app in a seperate process with file permission that
 
 Activites, services and broadcast receiver are all activated through an intent. Intents bind individual components to each other during runtime. Content providers, on the other hand, are only activated when targeted by a request from a content resolver. The content resolver handles all direct transactions with the content provider and providers methods for the external components to interact with content providers. 
 
+There are seperate methods for activating each type of components. You can start ab actuvut or give it something new to do by passing an Intent to startActivity() or startActivityForResult(). You start a Service by passing an intent to startService() and bind to a service through bindService(). You can initiate a broadcast by passing an Intent object to methods such as sendBroadcast(), sendOrderedBroadcast(), sendStickyBroadcast().
+
 
 
