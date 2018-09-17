@@ -10,5 +10,9 @@ A service is a general purpose entery point for keeping an app running on the ba
 
 A broadcast receiver is a component that enables Android OS to deliver events to app outside a regular user flow, allowing the app to respond to system wide broadcase. As broadcase receivers are another well defined entry into the app, Android OS can deliver a broadcasts even to apps that aren't currently running. A broadcast receiver is implemented as a subclass of BroadcastReceiver clas [ 	android.content.BroadcastReceiver ]. 
 
+A content provider managers a shared set of app data. Through the content provider, other apps can query and modify data if the content provider allows it. While a content provider appears like a database with an API, to the system a content provider is an entry point into the app for publishing named data items, identified by a URI scheme. 
+
+Because Android OS runs each app in a seperate process with file permission that restricts access to other apps, your app cannot directly interact with component of other apps. The operating system, however, can. To activate components in another app, you delivery your message to the OS as an Intent to start a particular component. The system than activates the component for you.
+
 
 
