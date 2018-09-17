@@ -14,5 +14,7 @@ A content provider managers a shared set of app data. Through the content provid
 
 Because Android OS runs each app in a seperate process with file permission that restricts access to other apps, your app cannot directly interact with component of other apps. The operating system, however, can. To activate components in another app, you delivery your message to the OS as an Intent to start a particular component. The system than activates the component for you.
 
+Activites, services and broadcast receiver are all activated through an intent. Intents bind individual components to each other during runtime. Content providers, on the other hand, are only activated when targeted by a request from a content resolver. The content resolver handles all direct transactions with the content provider and providers methods for the external components to interact with content providers. 
+
 
 
