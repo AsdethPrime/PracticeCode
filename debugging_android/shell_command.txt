@@ -1,2 +1,4 @@
 ## Find the battery level of the device
 $ acpi
+
+am command line tool that stands for activity manager appears very powerful. Doing more research on this. 
