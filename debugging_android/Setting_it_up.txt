@@ -1,0 +1,2 @@
+Step 1: Turn Developer Option On and Usb Debugging to Enable
+Step 2: adb shell
