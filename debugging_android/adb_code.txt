@@ -1,0 +1,4 @@
+Command line code to launch LoginActivity from mdm_android_agent
+
+$ adb shell am start -n "com.mdm.manish.mdm_agent_android/com.mdm.manish.mdm_agent_android.LoginActivity" -a android.intention.action.MAIN -c android.intent.category.LAUNCHER
+
