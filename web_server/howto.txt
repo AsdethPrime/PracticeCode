@@ -1,0 +1,16 @@
+This is a sample web server
+
+1) save the webserver1.py code on your computer
+2) on bash shell type the following command to connect with it
+
+$) telnet localhost 8888 
+
+3) As you can see from the command above webserver1.py listens on the given port
+4) The shell should now start a TCP connection and you get the following response:
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+5) Send a simple http get request
+get http
+6) you will get the response as specified in http_response
+7) Note that the value in http_response needs to be a valid http 1.1 response or webbrowsers will refuse to open it. 
