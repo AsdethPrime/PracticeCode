@@ -1,0 +1,4 @@
+# running ls command
+import subprocess
+subprocess.call("ls")
+subprocess.call(["ls", "-l"])
