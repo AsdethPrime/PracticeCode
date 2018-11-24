@@ -1,0 +1,4 @@
+### for python3
+import urllib.request
+response = urllib.request.urlopen("www.google.com")
+response.read()
