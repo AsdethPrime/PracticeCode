@@ -1,0 +1,11 @@
+If a QAS or a QPS officer calls regarding issues accessing cellular network [ i.e. my internet is not working] one of the following has gone wrong:
+1) The sim card has incorrect settings => You can check and change this back to correct settings by calling Vita group and providing them the asset number that the officer is using. 
+2) Device currently has incorrect settings
+=> Check if the device is enrolled [ QPS is DEP so it's not going to be a problem for them, QAS that are not DEP enrolled might have this issue ]
+=> Check if the device is getting correct APN profile from MDM 
+=> Check that the device is pointing to the correct APN 
+### Remember, if nothing else works , these are DEP device. As long as you can ensure the officer's username is associated to all the correct security group [ can be done from VITA ] as well as have the correct Organizational Group [ honestly you can practically forget about Organizational Group for QAS and QPS because if they are on wrong OG group, your only work around that is a hotswap] 
+3) Device is not physically faulty
+=> Goes without saying either sim is faulty or device itself is fault. 
+=> Solution as always - hotswap
+4) Last and hopefully the least - service number is missing from RADIUS server 
