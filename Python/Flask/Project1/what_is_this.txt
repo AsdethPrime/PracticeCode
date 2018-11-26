@@ -1,0 +1,5 @@
+This is a sample web program I am learning on python (Flask)
+
+For this program to be run you need :
+1) Python code
+2) A folder called templates and a file called home.html
