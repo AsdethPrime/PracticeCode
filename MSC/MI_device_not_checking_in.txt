@@ -1,0 +1,13 @@
+If a device enrolled with MI is not checking in 
+> Open mobileiron
+> Botton left hand corner there is a settings icon ( a clog wheel) - click on it
+> A settings page is dispalyed that shows:
+1) Mobile Acvitity Map
+2) check for Updates
+3) About
+> click check for updates which give you 2 options:
+1) Force Device check in 
+2) Re-enroll device 
+- You can force device check in from here and this should tell you if the device is not enrolled 
+- Try re-enrolling from here ONLY if DEP enrollment is not required 
+
