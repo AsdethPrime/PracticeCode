@@ -1,0 +1,26 @@
+Hi Amrinder, 
+
+You had asked me to conduct research on Caltex store iPAD and their support structure. This is what I have found:
+1)	Their first point of contact is Bamboora Service Desk
+2)	Order comes to us through email for new iPAD
+3)	For every store, 2 iPAD are ordered
+4)	These iPAD are DEP enabled but staged from our
+5)	From our end for a new device order:
+a.	We get an email request with order form
+b.	We put this through to fleet for staging
+c.	This then gets sent to Caltex store
+d.	Once received we close the ticket
+6)	For incident:
+a.	Calls are logged through Bamboora Service Desk
+b.	We create an INC ticket 
+c.	Try to troubleshoot this; if resolved we resolve the ticket
+d.	If a replacement is required – we warm transfer the user to Bambora Service Desk and resolved our ticket
+
+We also appear to have wifi password and Caltex account details on our end:
+-	WiFi name is Network Penguine
+-	Wifi password is Pizza4d!nner
+-	Store iPAD are set up under 2 usernames:
+o	CaltexStoreProd (Production) 
+o	CaltexStoreUAT (test) – normally not used 
+-	Account is a basic account ( 105 in total enrolled) 
+
