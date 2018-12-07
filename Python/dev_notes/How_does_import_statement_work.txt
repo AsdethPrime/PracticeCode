@@ -4,4 +4,13 @@ Import statements are executed in 2 steps:
   2. Define a name or names in local namespace within the scope of the import statement
   ############## What is a local namespace and why does defining name in it matter ??? #########################
   
+  The system maintains a table of modules that have been initialized, index by module name. This table is accessible as sys.modules.
+  
+  ####### Q1: system maintain modules tables, okay, but what system, the operating system?? python core system??; need to research system library ######
+  ####### a simple script to see system modules #######
+  import sys
+  sys.modules
+  ######################################################
+  
+  
  
