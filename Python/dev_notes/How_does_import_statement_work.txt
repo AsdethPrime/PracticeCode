@@ -1,1 +1,7 @@
-
+Import statements are executed in 2 steps:
+  1. Find a module, and initialize it if necessary
+  ############# What exactly does 'initializing' a modle mean, what happens under the hood?????###################
+  2. Define a name or names in local namespace within the scope of the import statement
+  ############## What is a local namespace and why does defining name in it matter ??? #########################
+  
+ 
