@@ -1,1 +1,7 @@
 => provides access to key variables used by python interpreter
+=> sys.argv returns a list of command line arguments passed to a python script. argv[0] is the script name. Whether or not argv[0] return full pathname is dependent on operating system
+
+## To test - do i get full path on ubuntu
+## To loop over the standard input or the list of files given on a command line, see the fileinput module
+
+
