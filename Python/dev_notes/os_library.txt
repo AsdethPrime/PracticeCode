@@ -8,3 +8,8 @@ os.geteuid()
 os.getgid()
 ## Get the name of login user; though in real work getpass.getuser() is preferred
 os.getlogin()
+## Set the environment variable named key to the string value. 
+os.putenv(key, value)
+
+
+    
