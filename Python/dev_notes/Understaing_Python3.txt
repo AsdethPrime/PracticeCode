@@ -1,0 +1,17 @@
+=> On ubuntu laptoo python3 interpreter is located in /usr/bin/python3
+=> comes with its own man and info page; has lots of option to explore in future
+=> typing python3 on terminal takes you directly to python terminal 
+=> Sample Code:
+    import sys
+    sys.path 
+=> This will show the default path used by system 
+=> On my ubuntu they are on :
+  1. "" // local directory
+  2. /usr/lib/python36.zip
+  3. /usr/lib/python3.6
+  4. /usr/lib/python3.6/lib-dynload
+  5. /home/manish/.local/lib/python3.6/site-packages
+  6. /usr/local/lib/python3.6/dist-packages
+  7. /usr/lib/python3/dist-packages
+  
+  ## Interesting investigating more about sys module in python
