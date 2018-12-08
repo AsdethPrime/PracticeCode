@@ -1,0 +1,1 @@
+=> provides access to key variables used by python interpreter
