@@ -1,0 +1,10 @@
+Background
+
+Morden apps have serveral requirements which cannot be provided by the app itself such as:
+1) Central Data Storage
+2) Communication Routing
+3) User Management
+
+In order to provide these services, apps rely on external software components called backend. The backend server runs on one or more remote servers, listens to network requests for devices that run the app, and provide them with services as required. 
+
+A popular version of backend written almost exclusively on javascript is NodeJS.
