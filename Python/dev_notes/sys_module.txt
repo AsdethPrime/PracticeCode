@@ -11,6 +11,23 @@
 
 => sys.executable returns a string giving the absolute path of the executable binary for python interpreter
 
+=> sys.exit() -> exit from python. Implemented by raising SystemExit exception. Accepts optional arguments.
+
+Example
+
+manish@android-dev:~/Desktop/python/sys$ python3
+Python 3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> sys.exit("Running away motherfucker")
+Running away motherfucker
+manish@android-dev:~/Desktop/python/sys$ echo $?
+1
+manish@android-dev:~/Desktop/python/sys$ 
+
+
+
 
 
 
