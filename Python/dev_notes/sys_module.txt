@@ -26,6 +26,8 @@ manish@android-dev:~/Desktop/python/sys$ echo $?
 1
 manish@android-dev:~/Desktop/python/sys$ 
 
+=> sys.is_finalizing() returns True if python interpreter is shutting down and Flase otherwise
+=> sys.platform returns a string representing the operating system being used. 
 
 
 
