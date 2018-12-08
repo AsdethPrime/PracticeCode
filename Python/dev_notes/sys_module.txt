@@ -4,4 +4,7 @@
 ## To test - do i get full path on ubuntu
 ## To loop over the standard input or the list of files given on a command line, see the fileinput module
 
+=> sys.byteorder returns a string representation of the byteorder. on my ubuntu sys.byteorder returns 'little'
+
+
 
