@@ -1,0 +1,10 @@
+import os
+## replacement for cd is os.chdir
+os.chdir('/')
+## get current working directory
+os.getcwd()
+## get effective user id (euid), group id (gid)
+os.geteuid()
+os.getgid()
+## Get the name of login user; though in real work getpass.getuser() is preferred
+os.getlogin()
