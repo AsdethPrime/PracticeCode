@@ -1,0 +1,11 @@
+Installing nodejs on ubuntu as well as npm
+
+$ sudo apt update 
+$ sudo apt install nodejs
+$ sudo apt install npm
+
+Testing installation
+$ node
+> console.log("Hello World!")
+Hello World!
+undefined
