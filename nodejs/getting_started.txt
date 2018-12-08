@@ -9,3 +9,7 @@ $ node
 > console.log("Hello World!")
 Hello World!
 undefined
+
+Installing ionic
+$ sudo npm install -g ionic
+
