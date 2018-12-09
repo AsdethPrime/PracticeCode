@@ -1,0 +1,12 @@
+To use a http server a cliane must:
+const http = require('http');
+
+HTTP message headers are represented in a JSON style key-value pair object
+{
+'content-lenght': 123,
+'content-type': 'text/plain',
+'connection': 'keep-alive',
+'host' : 'mysite.com',
+'accept': '*/*'
+}
+
