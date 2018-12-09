@@ -10,3 +10,9 @@ HTTP message headers are represented in a JSON style key-value pair object
 'accept': '*/*'
 }
 
+Node.js HTTP API is very low level. It deals with stream handling and message parsing only. It parses a message into headers and body but it does not parse the actual headers or the body. 
+
+The raw headers as they are received are retained in rawHeaders property, which is an array containing multple key-value pairs. 
+
+
+
