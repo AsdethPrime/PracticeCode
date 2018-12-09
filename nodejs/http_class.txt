@@ -22,3 +22,7 @@ Pooled connections have TCP Keep-Alive enabled for them, but servers may still c
 
 Servers may also refuse to allow multiple requests over the same connection, in which case the connection will be remade for every request and cannot be pooled. The Agent will still make the request to that server but each one will occur over a new connection. 
 
+XMLHttpRequest
+--------------
+The XMLHttpRequest object allows javascript to make HTTP requests and get fresh content from the server in order to update some part of the page without a full page reload. Thanks to this Ajax application were born. 
+
