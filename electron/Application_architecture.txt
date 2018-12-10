@@ -1,0 +1,6 @@
+// Accessing electron API
+const electron = require('electron');
+
+// Creating a new window
+const {BrowserWindow} = require('electron');
+const win = new BrowserWindow();
