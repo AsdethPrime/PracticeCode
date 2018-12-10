@@ -1,0 +1,2 @@
+MCC email address = MCCSupport@police.qld.gov.au
+QAS APN = "telstra.dcs.qld.gov.au"
