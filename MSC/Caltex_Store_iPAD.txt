@@ -4,7 +4,7 @@ You had asked me to conduct research on Caltex store iPAD and their support stru
 1)	Their first point of contact is Bamboora Service Desk
 2)	Order comes to us through email for new iPAD
 3)	For every store, 2 iPAD are ordered
-4)	These iPAD are DEP enabled but staged from our
+4)	These iPAD are DEP enabled but staged not from our team but rather Solve
 5)	From our end for a new device order:
 a.	We get an email request with order form
 b.	We put this through to fleet for staging
