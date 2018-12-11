@@ -1,2 +1,6 @@
 MCC email address = MCCSupport@police.qld.gov.au
 QAS APN = "telstra.dcs.qld.gov.au"
+
+=> RADIUS escalation for QAS goes to PSBA
+=> RADIUS escalation for QPS goes to MCC
+
