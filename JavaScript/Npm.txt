@@ -9,9 +9,6 @@ NPM [ Node Package Manager ]
 => cli runs on terminal allowing developers to interact with npm. 
 => registry is a large public database of JavaScript software and the meta info surrounding it. 
 
-=> install the latest version of npm on command line 
-$ cd ~
-$ sudo npm install npm@latest -g
 
 => A package is a file or a directory that is described by a package.json file. 
 => A package must have a package.json file in order to be published to npm registry.
@@ -63,8 +60,9 @@ $ npm install <module-name>
 
 => In global mode npm installs packages into the install prefix at prefix/lib/node_modules and bins are installed in prefix/bin
 => In local mode npm installs packages into the current project directory which defaults to the current working directory. Packages are installed into ./node_modules folder and bins are installed in ./node_modules/.bin 
-
 => Local mode is the default; use -g or --global on any command to operate in global mode instead. 
+=> The global install location is a place for command-line utilities to put their bins in the system PATH. It is not for use with require(). If you require() a module in your code than that means it is a dependency and part of your program and should be instaled locally.  
+
 
 => npm is extremely configurable. It reads configurations from 5 places:
 1) Command line switches
@@ -72,6 +70,22 @@ $ npm install <module-name>
 3) User config ( $HOME/.npmrc)
 4) Global config ( ... lib/utils/config-defs.js )
 
+// list installed packages 
+$ npm ls
+
+// search packages 
+$ npm search <package-name>
+$ npm search jsdom
+
+//update npm cli
+$ npm install npm -g
+$ sudo -H npm install npm@latest -g
+
+//update all outdated local packages 
+$ npm update
+
+// update all outdated global packages
+$ npm update -g
 
 
 
