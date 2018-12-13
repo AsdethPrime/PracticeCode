@@ -1,6 +1,3 @@
-check out ~./npm-init.js
-
-npm help 7 index 
 npm apihelp npm
 npm help link
 npm help 7 semver
@@ -19,6 +16,22 @@ npm help 5 npmrc
 npm help outdated
 npm help docs
 npm help explore
+npm help build
+npm help cache
+npm help completion
+npm help owner
+npm help pack
+npm help prefix
+npm help prune
+npm help rebuild
+npm help restart
+npm help root
+npm help run-script
+npm help start
+npm help stop
+npm help version
+npm help view
+npm help 7 developers
 
 ### Things to research
 1) node-gyp
