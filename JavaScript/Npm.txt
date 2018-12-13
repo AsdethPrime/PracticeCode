@@ -13,15 +13,14 @@ NPM [ Node Package Manager ]
 => A package is a file or a directory that is described by a package.json file. 
 => A package must have a package.json file in order to be published to npm registry.
 => Packages can be scoped and unscoped. Scoped packages can in turn be private or public.
-
 => A module is any file or directory that is located inside node_modules directory and that can be loaded by require() function [ require() function from nodejs ]
-
 => To be loaded by node.js require function , a module must be one of the following:
 1) a folder with a package.json file containing a main field
 2) a folder with a index.js file in it
 3) a JavaScript file 
+=> Most npm packages are modules because they are libraries that you load with require(). However, there is no requirement that an npm package be a module. Some packages only contain an executable command line interface and don't provide a main filed for use in node programs. 
 
-=> Since modules are not required to have a package.json file, not all modules are packages but all packages are modules. 
+
 
 => In the context of a node program the module is also the thing that gets loaded from a file
   var req = require('request') ;
