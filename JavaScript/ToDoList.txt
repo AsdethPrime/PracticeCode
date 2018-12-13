@@ -1,4 +1,3 @@
-npm help link
 npm help 7 semver
 npm help init
 npm help version
