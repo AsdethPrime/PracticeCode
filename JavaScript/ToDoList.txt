@@ -1,4 +1,3 @@
-npm help 7 faq
 npm help config
 npm help 7 config
 npm help 7 index 
@@ -10,6 +9,10 @@ npm help version
 npm help install
 npm help publish
 npm help uninstall
+npm help 5 npm-folders
+npm help root
+npm help bin
+npm help shrinkwrap
 
 ### Things to research
 1) node-gyp
