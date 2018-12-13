@@ -18,6 +18,7 @@ npm help 7 npm-registry
 npm help 5 npmrc
 npm help outdated
 npm help docs
+npm help explore
 
 ### Things to research
 1) node-gyp
