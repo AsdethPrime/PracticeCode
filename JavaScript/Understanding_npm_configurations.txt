@@ -1,0 +1,13 @@
+=> npm gets its configuration value from the following sources sorted by priority:
+1) Command-line flags
+2) Envrionment variable
+3) npmrc file
+4) Default config
+=> Command-line flags: putting "--foo bar" on the command line sets the foo configuration parameter to bar 
+=> Environment variable: any environment variables that starts with npm_config_ will be integrated as a configuration parameter; not case sensistive
+=> npmrc files: There are 4 relevant npmrc files:
+1) per project config file [ .nprc file located on root directory of the project]
+2) per user config file [ .nprc file located on user's home directory]
+3) global config file [ $PREFIX/etc/npmrc ]
+4) npm builtin config file [ path to npm/npmrc ]
+
