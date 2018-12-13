@@ -5,3 +5,14 @@ npm help 7 config
 npm help 7 index 
 npm apihelp npm
 npm help link
+npm help 7 semver
+npm help init
+npm help version
+npm help install
+npm help publish
+npm help uninstall
+
+### Things to research
+1) node-gyp
+2) devDependencies
+3) what is symlink
