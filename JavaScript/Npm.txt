@@ -86,6 +86,8 @@ $ npm update
 // update all outdated global packages
 $ npm update -g
 
+// Display a set of configuration parameters that are internal to npm and are the default if nothing else is set
+$ npm config ls -l 
 
 
 
