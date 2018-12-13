@@ -30,7 +30,7 @@ npm help start
 npm help stop
 npm help version
 npm help view
-npm help 7 developers
+
 
 ### Things to research
 1) node-gyp
