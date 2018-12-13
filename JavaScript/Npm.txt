@@ -8,4 +8,7 @@ NPM [ Node Package Manager ]
 => npm website is used to discover packages and set up profiles.
 => cli runs on terminal allowing developers to interact with npm. 
 => registry is a large public database of JavaScript software and the meta info surrounding it. 
+=> install the latest version of npm on command line 
+$ cd ~
+$ sudo npm install npm@latest -g
 
