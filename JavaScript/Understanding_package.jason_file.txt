@@ -53,4 +53,24 @@ $ npm help 5 package.json
 
 => dependencies: Dependencies are specified in simple object that maps a package name to a version range. The version range is a string which has one or more space-seperated descriptors. Dependencies can also be indentified with a tarball or a git URL. 
 # see npm help 7 semver 
+=> You may specify a tarball URL in place of a version range. This tarball will be downloaded into your package at install time. 
 
+=> devDependencies: If someone is planning on downloading and using your module in their project, they probably don;t want to download and build the external test or documentation framework that you use. 
+
+=> peerDependencies: In some cases, you want to express the compability of your package with a host tool or library. 
+
+=> bundleDependencies: An array of package names that will be bundled when publishing a package. 
+
+=> os: You can specify the operating system your module will run on. 
+
+=> cpu: If your code runs on a certain cpu architectures, you can specify which ones as follows:
+"cpu" : ["x64", "ia32"]
+
+=> preferGlobal: If your package is primarily a command-line tool that should be installed globally then set this value to true to provide a warning if it is installed locally. It does not actually prevent users from installing it locally, but it does help prevent some confusion if it does not work as expected. 
+
+=> private: If you set "private":true in your package.json then npm will refuse to publish it. 
+
+=> default values: npm will default some values based on package contents:
+1) If there is a server.js file in the root of your package, then npm will default the start command to node serve.js
+2) If there is a binding.gyp file in the root of your package, npm will default the pre-install command to compile using node-gyp. 
+3) If there is an AUTHORS file in the toor of your package, npm will treat each line as Name <email> (url) format where email and url are optional. Lines which start with a # or are blank will be ignored. 
