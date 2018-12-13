@@ -1,0 +1,11 @@
+NPM [ Node Package Manager ]
+----------------------------
+=> Consists of 3 different components:
+1) The website [ www.npmjs.com]
+2) Command line interface 
+3) The registry
+
+=> npm website is used to discover packages and set up profiles.
+=> cli runs on terminal allowing developers to interact with npm. 
+=> registry is a large public database of JavaScript software and the meta info surrounding it. 
+
