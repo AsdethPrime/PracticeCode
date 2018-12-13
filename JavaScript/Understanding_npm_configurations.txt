@@ -1,3 +1,6 @@
+## Access npm configuration settings details as 
+$ npm help 7 config
+
 => npm gets its configuration value from the following sources sorted by priority:
 1) Command-line flags
 2) Envrionment variable
@@ -24,4 +27,6 @@ CONFIGURATION OPTIONS
 => engine-strict [ Default:false ] : If set to true, npm will refuse to install or even consider installing any package that claims not to be compliant with current node.js version 
 => global [ Default:false ] : If set to true, will start operating on global mode by default
 => https-proxy [ Default:null ] : A url value which can be used to specify a https proxy to use
+=> ignore-script [ Default: false] : If set to true, npm does not run scripts specified in package.json files. 
+=> init-module [ Default ~/.npm-init.js ]: A path variable that defines the module to be loaded by the npm init command
 => 
