@@ -1,4 +1,3 @@
-npm help help
 npm help 7 faq
 npm help config
 npm help 7 config
