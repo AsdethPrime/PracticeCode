@@ -1,3 +1,5 @@
+check out ~./npm-init.js
+
 npm help 7 index 
 npm apihelp npm
 npm help link
