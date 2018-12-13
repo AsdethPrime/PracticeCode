@@ -15,6 +15,7 @@ npm help shrinkwrap
 npm help 7 npm-developers
 npm help 7 npm-registry
 npm help 5 npmrc
+npm help outdated
 
 ### Things to research
 1) node-gyp
