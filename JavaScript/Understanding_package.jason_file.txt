@@ -1,0 +1,56 @@
+=> Command line help for package.json can be found in 
+$ npm help 5 package.json
+
+=> Name, Version: The most import things in your package.json are the name and the version fields. Together they form an identifier that is assumed to be completely unique. Changes to the packages should come with changes to the version.
+=> Version must be parseable by node-semever which is bundled with npm as a dependency. 
+
+=> description: Description is a string which helps people discover your package as it is listed in npm search. 
+
+=> keywords: Keywords is an array of strings that helps people discover your package as it is listed in npm search. 
+
+=> homepage: Homepage is the url to the project homepage 
+
+=> bugs: bugs contains a url to your project issue tracker and/or the email address to which issues should be reported. 
+
+=> license: License specifies the license under which your package is released. 
+
+=> people fields: author, contributors => author, contributors are used to identify the author and the contributors of the project. Author is a single person where as contributors is an array of people. 
+=> A person is defined as an object that has a mandatory name field and optionally a url and an email field.
+
+=> files: The files field is an array of files to include in your project. IF you name a folder in the array, then it will also include files inside the folder. 
+=> You can also provide a .npmignore file in the root of your package or in subdirectories, which will keep files from being included even if they will be picked by the files array. 
+
+=> Certain files are always included regardless of the settings:
+1) package.json
+2) README
+3) CHANGELOG
+4) LICENCE/ LICENSE 
+
+=> Certain files are always ignored
+1) .git
+2) CVS
+3) .svn
+4) .hg
+5) .lock-wscript
+6) *.swp
+8).DS_Store
+9) ._*
+10)npm-debug.log
+
+=> main: The main field is a module ID that is the primary entry point to your program. For example: if your package is named foo, and a user installs it , and then calls require("foo") your main modules export objects will be returned. 
+
+=> bin: A lot of packages have one or more executable files that they would like to install into the $PATH. To use this feature supply a bin field in your package.json which is a map of a command name to a local file. On install npm will symlink that file into prefix/bin for global installs or ./node_modules/.bin/ for local installs. 
+
+=> man: Specify either a single file or an array of filenames to put in place for the man program to find. 
+
+=> repository: specify the place where your code lives. This is helpful for people who want to contribute. If the git repo is on girhub, then npm docs command will be able to find you. 
+
+=> scripts: The scripts proprety is a directory containing script commands that are run at various times in the lifecycle of your package. The key is the lifecycle event and the value is the command to run at that point. 
+# see npm help 7 npm-scripts
+
+=> config: A config object can be used to set configuration parameters used in the package scripts that persists across upgrades. 
+# see npm help 7 npm-config
+
+=> dependencies: Dependencies are specified in simple object that maps a package name to a version range. The version range is a string which has one or more space-seperated descriptors. Dependencies can also be indentified with a tarball or a git URL. 
+# see npm help 7 semver 
+
