@@ -1,0 +1,47 @@
+The following Javascript libraries are commonly used for Web Application
+
+Backend library
+----------------
+1) Express JS
+2) Node.js
+
+Model-View-Controller
+----------------------
+1) Angular Js
+2) Ember Js
+3) Backbone JS
+
+Ajax
+----
+1) Prototype
+2) JQuery
+3) Dojo Toolkit
+4) MooTools
+
+Templating
+1) Handlebar.js
+2) Jquery
+3) Dojo Toolkit
+4) Bootstrap
+
+User Interface
+1) ExtJS
+2) DHTMLX
+3) JQuery UI
+4) YUI
+5) qooxdoo
+
+Dependencies
+------------
+1. RequireJS
+2. CommonJS
+
+Special Purpose
+----------------
+1) Modernizer 
+2) PDF.js
+3) Hyphenator
+4) Svg.js
+5) Raphael
+6) Dropzone
+
