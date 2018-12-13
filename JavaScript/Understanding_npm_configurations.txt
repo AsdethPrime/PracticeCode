@@ -14,3 +14,14 @@
 CONFIGURATION OPTIONS 
 ---------------------
 => always-auth[Default:false] : if set to true force npm to always require authentication when accessing the registry, even for GET request
+=> bin-links [ Default:true] : if set to false npm will stop creating symlinks for package executables. 
+=> ca [Default: npm CA]: specify Certificate Authority that is trusted for SSL connections to the registry. Values should be in PEM format with newlines replaced by "\n"
+=> cafile [ Default:null ]: allows you to set a path to a file containing one or multiple CA Authority signing certificate. Similar to ca option but allows for multiple CAs as well as for the CA information to be stored in a file 
+=> cert [Default:null] : A client certifiate to pass when accessing the registry. 
+=> color [ Default:true ] : If false never show color. Accepts "always" to always show color or true to only print color codes for tty file descriptors. 
+=> depth [ Default: null ]: The depth to go when recuring directories for npm ls, npm cache and npm outdated
+=> dev [ Default:false ] : If set to true installs devDependencies along with the package
+=> engine-strict [ Default:false ] : If set to true, npm will refuse to install or even consider installing any package that claims not to be compliant with current node.js version 
+=> global [ Default:false ] : If set to true, will start operating on global mode by default
+=> https-proxy [ Default:null ] : A url value which can be used to specify a https proxy to use
+=> 
