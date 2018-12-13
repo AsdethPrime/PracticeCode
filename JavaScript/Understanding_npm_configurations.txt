@@ -11,3 +11,6 @@
 3) global config file [ $PREFIX/etc/npmrc ]
 4) npm builtin config file [ path to npm/npmrc ]
 
+CONFIGURATION OPTIONS 
+---------------------
+=> always-auth[Default:false] : if set to true force npm to always require authentication when accessing the registry, even for GET request
