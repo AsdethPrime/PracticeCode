@@ -1,0 +1,7 @@
+npm help help
+npm help 7 faq
+npm help config
+npm help 7 config
+npm help 7 index 
+npm apihelp npm
+npm help link
