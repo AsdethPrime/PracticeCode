@@ -45,4 +45,34 @@ console.log(output);
 To run the program; simple navigate to the root directory of the module and run the following command:
 $ node index.js
 
+npm cli
+--------
+=> you can use npm on command line by typing npm on command line
+=> running which npm ; you get a reference to /usr/local/bin/npm
+=> running file /usr/local/bin/npm; you get the following output:
+../lib/node_modules/npm/bin/npm-cli.js
+=> Appears that npm cli actually runs a javascript file called npm-cli.js
+
+=> Installing modules using npn
+$ npm install <module-name> 
+# default is local mode
+
+=> npm has 2 modes:
+1) global mode 
+2) local mode
+
+=> In global mode npm installs packages into the install prefix at prefix/lib/node_modules and bins are installed in prefix/bin
+=> In local mode npm installs packages into the current project directory which defaults to the current working directory. Packages are installed into ./node_modules folder and bins are installed in ./node_modules/.bin 
+
+=> Local mode is the default; use -g or --global on any command to operate in global mode instead. 
+
+=> npm is extremely configurable. It reads configurations from 5 places:
+1) Command line switches
+2) Environment variables
+3) User config ( $HOME/.npmrc)
+4) Global config ( ... lib/utils/config-defs.js )
+
+
+
+
 
