@@ -23,3 +23,16 @@ client_connection.close()
 
 # close the server socket
 ss.close()
+
+
+Understanding a TCP Server 
+--------------------------
+All sockets are created using the socket.socket() function. Server needs to sit on a port and wait for requests, so they must bind to a local address. TCP server must listen for incoming connections. Once this setup process is completed, a server can start its infinite loop. 
+
+A single server will then sit on the accept() call waiting for connection. By default, accept() is blocking, meaning that execution is suspended until a connection arrives. Sockets do support a non-blocking mode. 
+
+Once a connection is accepted, a seperate client socket is returned by accept() for upcoming message interchange. When an incoming request arrives, a new connection port is created to converse directly with that client leaving the main port free. 
+
+It is also common to hand off a client request to a new thread or process to complete. Python provides a high level module, SocketServer to support both threaded and spawned process handing of client request. 
+
+Once the temporary socket is created communication can commence and both client and server can start exchanging data. 
