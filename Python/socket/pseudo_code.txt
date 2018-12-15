@@ -1,0 +1,25 @@
+Creating a TCP Server Socket
+----------------------------
+# create the socket
+ss = socket.socket()
+
+# bind socket to hostname and post
+ss.bind()
+
+# listen for connection 
+ss.listen()
+
+# Accept client connection 
+client_connection = ss.accept()
+
+# Receive data from client
+client_connection.recV()
+
+# Send data to client
+client_connection.send()
+
+#Close communication with client
+client_connection.close()
+
+# close the server socket
+ss.close()
