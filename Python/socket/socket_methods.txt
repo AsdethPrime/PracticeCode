@@ -1,0 +1,10 @@
+Server socket methods 
+---------------------
+# s.bind() => bind hostname and port number pair to a socket
+# s.listen() => set up and start a TCP listener
+# s.accept() => passively accept TCP client connection waiting until connection arrives [ blocking ] 
+
+Client socket methods
+----------------------
+# s.connect() => Actively initiate TCP connection 
+# s.connect_ex() => Extended version of connection () were problems are returned as error code rather than exception. 
