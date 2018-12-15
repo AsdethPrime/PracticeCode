@@ -1,0 +1,17 @@
+
+Background on socket types 
+---------------------------
+
+Unix sockets
+=> Name AF_UNIX [ Address Family Unix] or AF_LOCAL [ Address Family Local ]
+=> Used for communication between processes on the same host 
+=> As of 2001 AF_UNIX is meant to be replaced by AF_LOCAL but they are both present in most programming interface for backward compatibiltiy 
+=> Unix/Local sockets are filesystem based 
+
+Internet socket 
+=> AF_INET and AF_INET6
+=> Network based sockets 
+
+AF_NETLINK is a special type of Linux socket created to allow communication between user and kernel level code using the standard BSD socket interface. 
+
+AF_TIPC is linux support for Transparent Interprocess Communication [ TIPC ]. TIPC allow cluster of computers to talk to each other without using IP based addressing. 
