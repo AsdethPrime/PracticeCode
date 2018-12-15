@@ -8,3 +8,20 @@ Client socket methods
 ----------------------
 # s.connect() => Actively initiate TCP connection 
 # s.connect_ex() => Extended version of connection () were problems are returned as error code rather than exception. 
+
+General socket methods
+----------------------
+# s.recv() => Receive tcp message
+# s.recv_into() => Receive TCP message into a specific buffer
+# s.send() => Transmit a TCP message
+# s.sendall() => Transmit all TCP messages to completion 
+# s.recvfrom() => Receive a UDP message
+# s.recvfrom_into() => Receive UDP message into specified buffer. 
+# s.sendto() => Send UDP message
+# s.getpeername() => Retrieves the remote address connected to the socket
+# s.getsockname() => Address of the current socket
+# s.getsockopt() => Return socket option 
+#. s.setsockopt() => set value for a given socket option 
+#. s.shutdown() => Shutdown the connection 
+# s.close() => Close the socket 
+# s.detach() => close socket without closing file descriptor 
