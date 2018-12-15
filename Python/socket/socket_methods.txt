@@ -25,3 +25,14 @@ General socket methods
 #. s.shutdown() => Shutdown the connection 
 # s.close() => Close the socket 
 # s.detach() => close socket without closing file descriptor 
+
+Blocking oriented method
+------------------------
+# s.setblocking() => set blocking or non-blocking mode
+# s.gettimeout() 
+# s.settimeout()
+
+File-oriented socket method
+---------------------------
+# s.fileno() => File descriptor of socket
+# s.makefile() => Create a file object associated with socket. 
