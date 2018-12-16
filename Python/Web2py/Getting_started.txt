@@ -1,0 +1,5 @@
+// Download Web2Py
+$ git clone --recursive https://github.com/web2py/web2py.git
+
+// Starting a web2py shell
+$python3 web2py.py -S welcome
