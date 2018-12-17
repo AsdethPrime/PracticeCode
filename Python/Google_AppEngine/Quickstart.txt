@@ -23,6 +23,33 @@ Flask-app core structure
         - submitted_form.html
 
 ==========================================================================================================
+=> Lay out the requirements.txt and appengine_config.py file 
+
+# Install the dependencies
+$ pip install -t lib -r requirements.txt
+
+
+
+
+
+
+
+appengine_config.py
+-------------------
+from google.appengine.ext import vendor
+vendor.add('lib')
+
+
+===========================================================================================================
+requirements.txt
+----------------
+flask
+werkzeug
+
+
+============================================================================================================
+
+
 
 
 
