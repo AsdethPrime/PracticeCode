@@ -4,3 +4,5 @@ QAS APN = "telstra.dcs.qld.gov.au"
 => RADIUS escalation for QAS goes to PSBA
 => RADIUS escalation for QPS goes to MCC
 
+// Unlocking SIM PIN
+Settings > Cellular Data > Cellular Data Options > sim Pin ( normally down the bottom) > Change > type old sim pin > Retype old sim pin and that unlocks it 
