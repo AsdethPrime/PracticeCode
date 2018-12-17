@@ -9,6 +9,20 @@ $ gcloud components install app-engine-python
 $ gcloud components install app-engine-python-extras
 $ gcloud components update
 
+=======================================================================================================
+
+Flask-app core structure
+1. appengine_config.py
+2. requirements.txt
+3. app.yml
+4. main.py
+5. static:
+        - Style.css
+6. template:
+        - form.html
+        - submitted_form.html
+
+==========================================================================================================
 
 
 
