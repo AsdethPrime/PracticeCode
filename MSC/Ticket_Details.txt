@@ -1,3 +1,5 @@
 INC0110384 – Mail is not syncing please give the user a callback
 REQ0214082 - User provided contact number, please call the officer back.
 INC0110317 – client certificate issue for QPS – how do we normally handle that?
+REQ0213576 - Unexpected device return for QAS/QPS - how do we normally handle that?
+
