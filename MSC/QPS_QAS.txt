@@ -12,3 +12,7 @@ Settings > Cellular Data > Cellular Data Options > sim Pin ( normally down the b
 // QAS Apple ID
 => for apple ID use their work email
 => they wont have the password - for that iforgot.apple.com
+
+
+// Sim and Passcode lock 
+For qps it is a hotswap right away because we can’t take the SIM card out but for qas we can so if you insert a unlocked SIM card into the device you can then send the clear passcode command which will avoid hotswap.
