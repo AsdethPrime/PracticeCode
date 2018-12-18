@@ -7,3 +7,8 @@ QPS Apn = "mobile.police.qld.gov.au"
 
 // Unlocking SIM PIN
 Settings > Cellular Data > Cellular Data Options > sim Pin ( normally down the bottom) > Change > type old sim pin > Retype old sim pin and that unlocks it 
+
+
+// QAS Apple ID
+=> for apple ID use their work email
+=> they wont have the password - for that iforgot.apple.com
