@@ -1,0 +1,9 @@
+********************* REMINDER*******************  
+
+Hi Team,
+
+NSWPF are still experiencing the internal P2 for missing accounts on the MDM platform, and officers being unassigned from the Mobipol container. Please go through troubleshooting steps, and if you're unable to resolve the issue, collect officer, device details, and if they have ever been able to log into a MObipol device before and escalate to BTS   
+
+Regards,
+
+********************* REMINDER*******************     
