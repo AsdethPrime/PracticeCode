@@ -4,7 +4,7 @@ REQ0213576 - Unexpected device return for QAS/QPS - how do we normally handle th
 INC0110222 - Qcad section of Qlite app is not showing all jobs - shows officer is not booked on - how do we handle that?
 INC0110110 - User is unable to book on to correct area in Qtask, as a result is unable to view any jobs for her area
 INC0109741 - QLite is displaying District water police officers. While QPrime is displaying Witsunday water police officer
-
+INC0110865 - Mobipol logout issue
 ---
 
 some with gripes
