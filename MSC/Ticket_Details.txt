@@ -5,6 +5,8 @@ INC0110222 - Qcad section of Qlite app is not showing all jobs - shows officer i
 INC0110110 - User is unable to book on to correct area in Qtask, as a result is unable to view any jobs for her area
 INC0109741 - QLite is displaying District water police officers. While QPrime is displaying Witsunday water police officer
 INC0110865 - Mobipol logout issue
+INC0110935 - eARF password issue ; login for remote management is working - login for eARF not working - how are they different?
+
 ---
 
 some with gripes
