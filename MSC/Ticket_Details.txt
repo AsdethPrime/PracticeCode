@@ -6,7 +6,7 @@ INC0110110 - User is unable to book on to correct area in Qtask, as a result is 
 INC0109741 - QLite is displaying District water police officers. While QPrime is displaying Witsunday water police officer
 INC0110865 - Mobipol logout issue
 INC0110935 - eARF password issue ; login for remote management is working - login for eARF not working - how are they different?
-
+INC0110535 - QAS iPAD delivered to an incorrect address. 
 ---
 
 some with gripes
