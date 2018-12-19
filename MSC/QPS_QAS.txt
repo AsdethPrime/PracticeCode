@@ -2,7 +2,7 @@ MCC email address = MCCSupport@police.qld.gov.au
 QAS APN = "telstra.dcs.qld.gov.au"
 QPS Apn = "mobile.police.qld.gov.au"
 
-=> RADIUS escalation for QAS goes to PSBA
+=> RADIUS escalation for QAS goes to PSBA [ who in turn log it with PSNMC ]
 => RADIUS escalation for QPS goes to MCC
 
 // Unlocking SIM PIN
