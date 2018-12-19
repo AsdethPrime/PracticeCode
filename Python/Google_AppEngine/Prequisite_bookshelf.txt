@@ -1,0 +1,7 @@
+Few things to research before completing the bookself applicaiton:
+1) Cloud Datastore
+2) Cloud Pub/Sub
+3) Cloud Storage
+4) Stackdriver Loggin
+5) OAth 2.0 client
+
