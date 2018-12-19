@@ -16,3 +16,25 @@ Settings > Cellular Data > Cellular Data Options > sim Pin ( normally down the b
 
 // Sim and Passcode lock 
 For qps it is a hotswap right away because we can’t take the SIM card out but for qas we can so if you insert a unlocked SIM card into the device you can then send the clear passcode command which will avoid hotswap.
+
+// QAS Hotswap and Case Replacement process
+New call number :NCALL0629997
+Short Description : [##] RE: Hot swap for screen damaged I pad MSC Ref INC0110783
+Description :received from: yekshah.chetty@ambulance.qld.gov.au
+
+Hi Zoe,
+
+In the past I have not been asked to approve hot swaps.
+
+Approval has only been required for lost/stolen devices as this is not a ‘hot swap’ and the allocated device will be reducing the ‘hot swap’ pool.
+
+Approval is also required for the replacement of cases. If replacement chargers are required these need to be referred to the callers Manager to organise locally.
+
+Vita send me an approval request should the device be deemed repairable.
+
+Cheers,
+
+Yekshah
+
+
+
