@@ -14,5 +14,6 @@ $ sudo apt install libapache2-mod-wsgi
 
 // Collect host details
 
-# host ip address [ through python ]
+# host ip address [ through python ] => ipadress = 10.148.0.2
 socket.gethostbyname(socket.gethostname())
+
