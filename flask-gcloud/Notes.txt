@@ -1,0 +1,18 @@
+// create a virtual machine
+$ gcloud compute instances create flask01
+
+// ssh into it
+$ gcloud compute ssh flask01
+
+// set up the development environment
+$ sudo apt update
+$ sudo apt upgrade
+$ sudo apt install python3
+$ sudo apt install python3-pip
+$ sudo apt install apache2
+$ sudo apt install libapache2-mod-wsgi
+
+// Collect host details
+
+# host ip address [ through python ]
+socket.gethostbyname(socket.gethostname())
