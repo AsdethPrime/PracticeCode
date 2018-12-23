@@ -1,0 +1,25 @@
+Everyone is talking about yarn but I have always used npm. Lets take this for a spin and see what advantage I get.
+// Making a sample project director and jumping into it
+$ mkdir ~/Desktop/yarn
+$ cd ~./Desktop/yarn
+
+// Starting a new project
+$ yarn init
+=> Walks me through the creation of package.json with the following questions:
+# name
+# version
+# description
+# entry point
+# repository url
+# author
+# licence
+# private 
+=> Once completed creates me a simple package.json file:
+{
+  "name": "testing_yarn",
+  "version": "1.0.0"
+   "description": "Trying to take yarn out for a spin",
+  "main": "index.js",
+  "author": "Asdethprime",
+  "license": "MIT"
+}
