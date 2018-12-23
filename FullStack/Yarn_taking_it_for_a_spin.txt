@@ -23,3 +23,9 @@ $ yarn init
   "author": "Asdethprime",
   "license": "MIT"
 }
+
+=> Interface certainly feels cleaner but thus far in regards to functionality nothing extra from npm ( though literally just started testing this)
+
+################ To do list - actually try and repo and see what difference it makes 
+
+
