@@ -31,6 +31,13 @@ $ yarn install --force
 // Installing only production dependencies
 $ yarn install --production
 
+// Check if any files from nodes_modules have been removed
+$ yarn install --check-files
+
+// Force re-install all packges in node_modules
+$ yarn install --force
+
+
 
 
 
