@@ -22,6 +22,16 @@ $ yarn remove [package]
 $ yarn 
 $ yarn install 
 
+// Installing one and only version of the package 
+$ yarn install --flat
+
+// Forcing a re-download of all packages
+$ yarn install --force
+
+// Installing only production dependencies
+$ yarn install --production
+
+
 
 
 
