@@ -1,0 +1,8 @@
+// Starting a project
+$ yarn init
+
+// Adding dependencies
+$ yarn add [package]
+$ yarn add [package]@[version]
+$ yarn add [package]@tag
+
