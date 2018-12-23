@@ -1,0 +1,4 @@
+Create a react project
+$ yarn create react-app myapp
+$ cd myapp
+$ yarn start 
