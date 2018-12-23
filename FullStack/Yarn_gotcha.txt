@@ -1,0 +1,6 @@
+yarn install
+-------------
+=> If 'yarn' is supplied to commandline without specifying an option it defaults to 'yarn install'
+=> yarn <tries to > use yarn.lock file intelligently. 
+=> If yarn.lock file is accounts for ALL dependencies in your package.json file [ i.e. its there and upto date]; yarn will  only install whatever is listed there 
+=> If yarn.lock file does not account for ALL dependencies [ i.e. either you have manually added some packages on package.json or yarn.lock file has never been created] yarn will use package.json as the single source of truth and rebuilt yarn.lock file. This may not always be what you want. If you don't want your yarn.lock file to change; yarn provides a flag ( --frozen-lockfile)
