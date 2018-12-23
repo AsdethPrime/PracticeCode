@@ -21,6 +21,31 @@ Location and details
 => File type: symbolic link to ../lib/node_modules/yarn/bin/yarn.js
 => Source code for yarn.js on github
 https://github.com/yarnpkg/yarn/blob/master/bin/yarn.js
+=> Yarn.js is actually pretty straight forward and does the following
 
+1) Check if the major version of node is greater than 4, else exit
+var ver = process.versions.node;
+var majorVer = ver.split('.')[0]
+var intVer = parseInt(majorVer)
+if ( intVer < 4)
+{
+  // using older version of node - exit 
+  process.exit(1)
+}
+
+2) Once it is satisfied that node running on the device is higher than major version 4, it finally loads the cli binary file from the library and expects it to autorun. It checks if this has happened , it will then capture the error , spit it out, and die. 
+
+var cli = require (__dirname + '/../lib/cli');
+if (!cli.autoRun)
+{
+  // cli has not autorun, lets print the error and exit
+  cli.default().catch(function(error) 
+  {
+      console.error(error.stack || error.message || error);
+      process.exitCode = 1;
+   }
+ }
+ 
+  
 
 
