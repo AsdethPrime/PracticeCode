@@ -1,0 +1,17 @@
+What is Yarn?
+-------------
+=> A package manager for javascript similar to npm but is meant to be a comprehensive alternative to npm
+=> Yarn can also be used for code sharing. Code is shared through the concept of package [ i.e a folder with code + package.json file to explain the package]
+
+Installing Yarn
+---------------
+
+// Adding yarnpkg to apt repository
+$ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg
+$ sudo apt-key add -
+$ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+$ sudo apt update
+
+// Downloading it with the install command
+$ sudo apt install yarn
+
