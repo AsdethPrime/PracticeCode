@@ -1,0 +1,8 @@
+Things to research 
+1) yarn
+2) jsx
+3) DOM
+4) Webpack
+5) React
+6) Babel
+7) npm watcher
