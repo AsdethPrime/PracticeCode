@@ -10,3 +10,18 @@ $ yarn add [package]@tag
 => --peer for peer dependencies
 => --optional for optional dependencies 
 
+// upgrading dependencies
+$ yarn upgrade [package]
+$ yarn upgrade [package]@[version]
+$ yarn upgrade [package]@[tag]
+
+// Removing dependencies
+$ yarn remove [package]
+
+// Installing all dependencies of a project - Either 1 of the 2 works
+$ yarn 
+$ yarn install 
+
+
+
+
