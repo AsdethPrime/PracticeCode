@@ -5,4 +5,8 @@ $ yarn init
 $ yarn add [package]
 $ yarn add [package]@[version]
 $ yarn add [package]@tag
+// 3 flags becomes available
+=> --dev for dev dependencies
+=> --peer for peer dependencies
+=> --optional for optional dependencies 
 
