@@ -28,4 +28,35 @@ $ yarn init
 
 ################ To do list - actually try and repo and see what difference it makes 
 
+// Adding a package 
+=> Yarn shows 3 ways to add packages
+yarn add [package]
+yarn add [package]@[version]
+yarn add [package]@[tag]
+=> lets add react 
+$ yarn add react
+=> no lockfile found 
+=> Resolving packages
+=> Fetching packages
+=> Linking dependencies
+=> Building fresh packages
+=> success saved a lock file
+=> saved 4 new dependencies
+=> direct dependencies:
+  # react@16.7.0
+=> All dependencies
+  # js-token@4.0.0
+  # prop-types@15.6.2
+  # react@16.7.0
+  # scheduler 
+=> as it says on the output create a yarn.lock file 
 
+=> added react to the dependencies
+
+=> looking at yarn.lock file it contains:
+1) Module name
+2) version number
+3) url from where the module was resolved 
+4) SHA512 hash for integrity
+
+  
