@@ -1,0 +1,16 @@
+Force device check in:
+-> Open intelligent hub
+-> Click on "This Device"
+-> At the very end you should seen an option "Send data" which should ideally give you a message like "Request sent, syncing will take few minutes" 
+
+Re-enroll device:
+-> Open intelligent hub
+-> Click on "This Device"
+-> Click on "Enrollment"
+-> This will have a "Reenroll device" option
+This also has the following:
+1) Mode: Managed device 
+2) Server: 
+3) Group ID:
+4) Username: 
+
