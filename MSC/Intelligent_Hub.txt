@@ -14,3 +14,8 @@ This also has the following:
 3) Group ID:
 4) Username: 
 
+Testing internet connection from Intelligent hub:
+-> Open intelligent hub 
+-> Click on "Support"
+-> Click on "Run Tests"
+-> Check what test have been configured. Each test name can normally be clicked to cause this tests to run
