@@ -3,3 +3,6 @@ As per the description, you would like to remove the users which have been disab
 1. If you Disable a user in AD, it will be marked as inactive in Airwatch when the next sync happens. As a result, the device will be Enterprise/Device wiped based on the settings.
 2. If you directly delete a user from AD(without Disabling), then in the next sync the Airwatch will not be able to find that user in AD and hence it will not be able to sync the attribute "userAccountControl" and as a result, the account will still be kept as active in Airwatch.
 3. Therefore, it is recommended to Disable the users in AD until the next sync happens. Once the user is marked as inactive in Airwatch, you can safely delete the user from AD.
+
+
+INC0110215
