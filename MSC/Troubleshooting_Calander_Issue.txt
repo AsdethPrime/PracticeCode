@@ -1,0 +1,5 @@
+Try and see if changing Set automatically on Date and time will change anything
+=> Settings > General > Date & Time
+=> change Set Automatically to off ; change city name 
+=> Check if the details changes on the deivce
+
