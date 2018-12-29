@@ -1,8 +1,6 @@
-Things to research 
-1) yarn
-2) jsx
-3) DOM
-4) Webpack
-5) React
-6) Babel
-7) npm watcher
+Few web application frameworks to look into
+1) Zope
+2) Quixote
+3) Webware
+4) SkunkWeb
+
