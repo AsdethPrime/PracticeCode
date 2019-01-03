@@ -1,0 +1,20 @@
+Packet Data Protocol (PDP) 
+
+Things we tried but did not work
+--------------------------------
+
+PDP Authentication Error Troubleshooting
+-----------------------------------------
+-> Make sure the device is enrolled and checking in 
+-> Make sure if has the correct APN code 
+-> Make sure QAS DEP APN profile has been applied
+-> check with vita to make sure telstra.internet and telstra.wap codes have been applied 
+-> First time tried username and password of the officer to see if that works - did not work
+-> Tried full email address and password to see if that makes a difference 
+-> got him to disconnect 
+
+But even then no solution 
+
+
+
+
