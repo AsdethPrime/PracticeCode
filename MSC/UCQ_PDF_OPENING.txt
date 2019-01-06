@@ -1,0 +1,18 @@
+Hi Anthony,
+
+Thanks for sharing these details. I want to add that MDM cannot set the default application hence the 9 or 10 devices which have the Secure Launcher profile on them, can be assisted to set the default application on the device following the below steps. 
+
+1.      Access the Settings
+2.      Go to Application manager 
+3.      Tap on the application and review the “Set as Default” option 
+4.      Clear Defaults
+5.      Open the PDF with the correct application when prompted. 
+
+I can request Service desk to guide the users to perform above steps to resolve the issue. 
+
+Roopali Rao
+Platform Engineer
+Business Technology Services – Mobility
+Global Services, Global Enterprise and Services	 
+
+
