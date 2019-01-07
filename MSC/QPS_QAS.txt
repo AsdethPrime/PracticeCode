@@ -37,4 +37,9 @@ Cheers,
 Yekshah
 
 
+// QAS datacode
+- Checking if sim card has all the correct settings applied to it
+- Code: make sure that there is no gpcorp code on it 
+- code that should there: no_wapb3, no_comb3, gpemrql 
+
 
