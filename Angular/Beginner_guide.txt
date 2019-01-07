@@ -1,0 +1,4 @@
+Removing AngularJS from your Search
+---------------------------------------
+You can easily exclude AngularJS search results form your search by using Google's search operators.
+By appending -angularjs to your search term, you only get true angular results. This can be a huge lifesaver!
