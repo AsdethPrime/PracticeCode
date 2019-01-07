@@ -11,6 +11,19 @@ Creating a new project [ called angular-project]
 --------------------------------------------------
 $ ng new angular-project
 
+Flags of ng new
+--directory => change name of project directory
+--dry-run => print the changes it would have made to the console
+--routing => Generates an additional module to contain the angular routing definitions. This is turned off by default.
+--skip-commit => The angular-cli does not only initialize a Git repository for your project by default but also issues a commit after file generation is done. Use this option to turn that off.
+--skip-git => Turns off the automatic Git repository initialization for your project. 
+--skip-install => After creating all files, the angular-cli runs an npm install command, to download and install all required dependencies. Because this process can take a while, it can be very useful to turn that behavior off. 
+--skip-tests => Per default, the cli generates test files for each component (.spec files). With this option, you can turn that off.
+--source-dir => The cli generates all source files inside of an "src" directory. With this flag, you can change the directory for your source files.
+--style => The angular-cli leaves it up to you, whether you want to use a css pre-compiler. It generates plain css files per default. With this option you can change that. Possible values are css, scss, less, sass, styl (stylus).
+--verbose => Enables advanced detail logging.
+
+
 
 
 
