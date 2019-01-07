@@ -6,3 +6,11 @@ By appending -angularjs to your search term, you only get true angular results. 
 Installing angular
 ------------------
 $ sudo -H npm install -g @angular/cli
+
+Creating a new project [ called angular-project]
+--------------------------------------------------
+$ ng new angular-project
+
+
+
+
