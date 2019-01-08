@@ -1,3 +1,7 @@
+// QTASK app issue
+-> Play around with settings and found - your area to input a patrol group
+
+=========================================================================
 MCC email address = MCCSupport@police.qld.gov.au
 QAS APN = "telstra.dcs.qld.gov.au"
 QPS Apn = "mobile.police.qld.gov.au"
