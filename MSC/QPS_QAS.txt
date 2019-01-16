@@ -1,3 +1,10 @@
+/// QAS and QPS for hotswap
+> No PO Box ever
+> Another station or post office ( very very rarely and only if vita accepts it)
+> Residentail address -> under very exceptional 
+
+
+
 // QTASK app issue
 -> Play around with settings and found - your area to input a patrol group
 
