@@ -1,0 +1,21 @@
+Hi Team,
+
+Just a simple troubleshooting steps when you receive a call for this issue is to check the version of Mobileiron that is installed on the device. Basically anything older than version 10 does not appear to be compliant on the MDM and blocks connections in web@work and to other QPS resources. Follow steps below if the previously stated occurs
+
+1.	Make sure the device is checking in
+2.	Un-install Mobileiron application
+3.	Check in the device to recognise the application is un-installed
+4.	Then install the Mobileiron client form the Apps@work app store.
+5.	Once installed open the application, check in the device making sure it comes up as compliant on both the server and client.
+6.	Then have officer open the web@work browser.
+
+Don Acolentaba
+Senior Technical Support Analyst
+Business Technology Services – Mobility 
+Global Enterprise and Services
+
+P    1800 994 905
+E    Don.Acolentaba@team.telstra.com
+E    DAcolentaba@mscmobility.com.au
+W    www.telstra.com
+
