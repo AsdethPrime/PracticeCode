@@ -1,0 +1,65 @@
+UnitingCare has deployed Samsung S5 and A5 devices as shared generic devices. The purpose of the devices are mainly to use the Procura application to log time for onsite nursing jobs. The devices are staged by VITA with a configured launcher profile that restricts the functions of the device and automatically installs managed applications. User should receive the device full configured, with the exception of logging into individual applications and emails that BTSM does not support.
+Creating User accounts for Bluecare devices
+User accounts for bluecare devices are basic and user a generic username e.g. Brisbanecc001. The first section determines where the device is based and the number is which device it is. Usernames are provided by UnitingCare Service desk on new device orders.
+ 
+Troubleshooting
+Time and Date issues
+As UnitingCare Users are in Queensland they need to have their devices run in that time zone. To fix this please follow steps below.
+1.	Make sure the device is checking in on the MDM console
+2.	Remove the “BlueCare-ClinicalPilot-Android-Time-Date Prod” profile. Allow the profile to display a red and white cross from the console.
+3.	Push the “BlueCare-ClinicalPilot-Android-Time-Date Prod” profile. Allow the profile to display a green and white tick from the console. 
+a.	If you are having issues pushing the command please try other common troubleshooting
+Passcode and restriction profile
+If you are looking at the devices profile page you might notice that there are 2 passcode profiles as per below.
+The first profile is for passcode as per its name, whereas the second is actually the restrictions profile.
+ 
+Launcher issues
+These devices are staged using launcher. Please attempt basic troubleshooting steps below.
+1.	Make sure there is an active mobile data connection
+2.	Check in device
+3.	Remove and re-push the launcher profile 
+a.	“A5 Android Secure Launcher” – from Samsung A5 devices
+b.	“S5 Android Secure Launcher” – from Samsung S5 devices
+4.	Restart the device
+Organise replacement with VITA if steps above fail to fix device launcher related issues.
+ 
+Application Support
+This should only be restricted to downloading and installation of the managed applications. For example if a user is having issues with the Procura application, as long as they application is installed and up to date there is not much we can to assist with beyond this point. Issues like logins and errors should go back to UnitingCare service desk.
+ 
+Email Support
+BTSM does not manage emails via the Airwatch in any way, shape or form. These includes opening files from email attachments. Emails setup request and troubleshooting should be supported entirely with UnitingCare service desk.
+ 
+Wi-Fi
+Wi-Fi is not setup using a managed profile from Airwatch for a corporate network. The most you can advise is to restart the device or organise a replacement. The majority of Wi-Fi troubleshooting should be completed by Uniting Care Service Desk.
+ 
+Mobile Data internet\Phone service issues
+There are no Airwatch profile managing the connection to the internet Please complete normal troubleshooting with the device which should include..
+•	Restarting the device
+•	Testing the SIM card with another device
+•	Testing the device with another SIM card
+•	Checking service status with VITA
+If you still are unable fix the issue are the steps provided please organise replacement with VITA.
+ 
+Re-enrollment
+You may find some device have reset themselves and require enrollment, please follow instructions below.
+DO NOT RE-ENROLL BLUECARE DEVICES
+Because these devices are staged, replacements should be processed instead. User are not to be provided the MDM user account password at any point. VITA is the only team that needs to use this password for enrollment.
+ 
+Common Interactions with VITA
+New orders
+We will receive new orders for device in Service Now from the UnitingCare service desk.
+1.	Add the listed generic account to the MDM as a Basic account with the default password listed in the customer profile. 
+a.	Make sure an account name is provided.
+b.	Make sure that the account does not already exist. If the account does exist place ticket on hold and request a new account from UnitingCare service desk.
+c.	Make sure to make a Service Now caller record based on the Generic Email address provided
+2.	Forward completed New order request to VITA with BTSM Service Now ticket reference
+3.	Once the device dispatch notice has been received from VITA resolve the ticket
+Reallocations
+We will receive reallocations request for devices in Service Now from the UnitingCare service desk. Please process as a separate ticket from “Replacement” request.
+1.	Update the first and last name of generic account on the MDM and Service Now to match the new owner of the device.
+2.	Forward complete Reallocations request template to VITA with BTSM Service Now ticket reference.
+3.	Resolve ticket once resolution has come from VITA that asset records have updated for device.
+Replacements
+We will receive request in Service Now from the UnitingCare service desk as well as from the results of troubleshooting incidents. Please process as a separate ticket from “Reallocation” request.
+1.	Forward complete replacement template to VITA.
+2.	Once resolution from VITA has been received, action included instructions to retire device from MDM.
