@@ -1,0 +1,5 @@
+-	Remove AW Inbox
+-	Remove Email profile
+-	Remove boxer app
+-	Repush email profile
+-	Re-install boxer app
