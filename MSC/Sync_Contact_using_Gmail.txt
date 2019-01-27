@@ -1,2 +1,11 @@
 https://support.google.com/contacts/answer/2753077?hl=en&ref_topic=21369&visit_id=636841677687755688-524958488&rd=1&co=GENIE.Platform%3DiOS&oco=1
 
+Open your iPhone or iPad's Settings app.
+Tap Accounts & Passwords and then Add Account and then Google.
+Enter your email and password. If you use 2-Step verification, use an app password.
+Tap Next.
+Switch "Contacts" on.
+At the top, tap Save.
+
+
+To start syncing, open your iPhone or iPad's Contacts app.
