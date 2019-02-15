@@ -1,0 +1,22 @@
+Core components of AirWatch 
+-----------------------------
+1) Console Server 
+=> AirWatch API 
+=> Web-app for admin ( the mdm server we see) 
+
+2) Device Services Server 
+=> AirWatch Cloud Messaging (AWCM)
+
+3) AirWatch Database (SQL)
+
+
+Optional Components
+---------------------
+1) VMware Identity Manager
+2) Secure Email Gateway (SEG)
+3) VMware Tunnel 
+4) AirWatch Cloud Messaging (AWCM)
+5) AirWatch Content Locker ( Formally Mobile Access Gateway ) 
+=> works in conjucture with Content Locker
+6) AirWatch Email Notification Service
+7) Caching Solution (Memcached) 
