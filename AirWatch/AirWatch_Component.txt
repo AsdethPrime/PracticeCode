@@ -20,3 +20,11 @@ Optional Components
 => works in conjucture with Content Locker
 6) AirWatch Email Notification Service
 7) Caching Solution (Memcached) 
+
+Core Enterprise Mobility Management Contepts covered by AirWatch
+-----------------------------------------------------------------
+1) Mobile Device Management => AirWatch Core
+2) Mobile Email Management => SEG
+3) Mobile Content Management => MAG/ UAG + Content Locker
+4) Mobile Application Management => MAG / UAG + Tunnel + VPP
+
