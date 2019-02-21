@@ -1,8 +1,0 @@
-Workspace one and the services that address business requirements are based on unique hybrid cloud architecture.
-Mobile device management and identity management services are delivered through airwatch and identity manager. 
-The final key component to the architecture is a lightweight set of appliances that secure integration between cloud based and on premises services. 
-
-Making end user's access to apps seamless is a sure way to improve adoption. Therefore, workspace one introduces one touch mobile SSO. This feature allows use of capabilities such as Apple Touch ID, to provide password free and secure means of logging into apps.
-
-Identity manager provide the solution's identity related components. These components include authentication using username/password, Two Factor Authentication [ technically multifactor authentication ],  certificate, kerberos, mobile SSO an inbound SAML from third party systems.
-
