@@ -1,0 +1,6 @@
+Payment module
+---------------
+Different products are charged differently.
+With persistent disk you pay for the capacility you allocate whereas with cloud storage buckets you pay for capacity you actually use
+All billable resources are grouped into an entity called projects
+
