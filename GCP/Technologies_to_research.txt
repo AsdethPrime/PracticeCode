@@ -1,0 +1,4 @@
+Technologies to get familiar with if you are new to cloud
+1) Container, docker and Kubernetes
+2) Load Balancers 
+3) IaaS as a service products like Terraform or Google Cloud Deployment Manager
