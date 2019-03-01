@@ -15,3 +15,13 @@ One step down comes regional resources these only need to be replicated within d
 
 Below these are zonal resources which only need to be replicated within the same data center. 
 
+
+Storage technologies tend to be regional or global
+Cloud SQL -> regional 
+Big Table -> regional 
+Cloud Spanner -> global
+
+Compute tends to be regional or zonal 
+1) AppEngine -> Regional 
+2) VM -> Zonal 
+3) Disk Storage -> Zonal
