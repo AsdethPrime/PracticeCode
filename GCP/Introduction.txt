@@ -6,3 +6,12 @@ All billable resources are grouped into an entity called projects
 
 Regiones are geographical regions at the level of a subcontinent - for example: the central us, east Asia etc. 
 Zones are a colection of data-centers within the region
+
+If you replicate resources across different zones, such architecture can legitimately termed as "high availability architecture"
+
+If a resource is available globally, it is known as a global or a multiregional resource. 
+These multiregional resources tend to be the most expensive, the most available and most widely replicated.
+One step down comes regional resources these only need to be replicated within different data centers with the region. 
+
+Below these are zonal resources which only need to be replicated within the same data center. 
+
