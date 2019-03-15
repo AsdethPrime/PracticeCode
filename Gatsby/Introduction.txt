@@ -1,0 +1,10 @@
+Built on:
+1) React 
+2) Webpack
+
+Installing gatsby
+$ sudo yarn global add gatsby-cli
+$ sudo npm install -g gatsby-cli
+
+Creating a gatsby project
+$ gatsby new gastby_crash_course
